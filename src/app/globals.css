@@ -206,4 +206,20 @@ body {
     transform: none !important;
   }
 }
+/* Shared mobile contact actions and space for the iPhone home indicator. */
+.mobile-actionbar {display:none}
+#hero-request, #repair-form {scroll-margin-top:145px}
+@media(max-width:767px) {
+  body {padding-bottom:calc(80px + env(safe-area-inset-bottom))}
+  .mobile-actionbar {display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;inset:auto 0 0;z-index:45;background:white;border-top:1px solid var(--gray-200);padding:10px max(14px,env(safe-area-inset-right)) max(10px,env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left))}
+  .mobile-actionbar a {display:flex;align-items:center;justify-content:center;min-height:48px;border:1px solid var(--red);border-radius:5px;color:var(--red);font-size:15px;font-weight:700;text-decoration:none}
+  .mobile-actionbar a:last-child {background:var(--red);color:white}
+  .mobile-actionbar a:focus-visible {outline:3px solid #111;outline-offset:3px}
+  .mobile-chat-trigger {bottom:calc(88px + env(safe-area-inset-bottom));right:16px;min-height:48px;min-width:48px}
+  .mobile-chat-panel {bottom:calc(82px + env(safe-area-inset-bottom));max-height:calc(100dvh - 110px - env(safe-area-inset-bottom))}
+  .mobile-home-hero h1 {font-size:clamp(29px,8.2vw,38px);line-height:1.15;margin-bottom:18px}
+  .mobile-home-hero .hero-content-grid {gap:28px}
+  #hero-request {scroll-margin-top:140px}
+  input,textarea,select {font-size:16px}
+}
 

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
 import { Oswald, Source_Sans_3, Poppins } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
@@ -7,9 +7,12 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import DelayedChatWidget from '@/components/DelayedChatWidget'
 import TrackingListeners from '@/components/TrackingListeners'
+import MobileActions from '@/components/MobileActions'
 import './globals.css'
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID
+
+export const viewport: Viewport = {width: 'device-width', initialScale: 1, viewportFit: 'cover'}
 
 const oswald = Oswald({
   variable: '--font-oswald',
@@ -144,6 +147,7 @@ export default function RootLayout({
         <Header />
         <main id="main-content" className="pt-[7.5rem]">{children}</main>
         <Footer />
+        <MobileActions />
         <DelayedChatWidget />
         <TrackingListeners />
         <Analytics />

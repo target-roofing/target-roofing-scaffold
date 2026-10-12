@@ -155,6 +155,7 @@ export default function Footer() {
               <span>Serving Lee, Collier, Charlotte & Sarasota Counties</span>
               <Link href="/website-privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
               <Link href="/mobile-privacy-policy" className="hover:text-white transition-colors">Mobile Privacy Policy</Link>
+              <Link href="/office" className="py-3 lg:py-0 hover:text-white transition-colors">Employee office</Link>
             </div>
           </div>
         </div>

@@ -90,7 +90,7 @@ export default function ChatWidget() {
         <button
           aria-label="Chat with Target Roofing"
           onClick={() => setOpen(true)}
-          className="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-[var(--red)] hover:bg-[var(--red-dark)] text-white px-5 py-3.5 rounded-full shadow-2xl transition-all hover:scale-105 group"
+          className="mobile-chat-trigger fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-[var(--red)] hover:bg-[var(--red-dark)] text-white px-5 py-3.5 rounded-full shadow-2xl transition-all hover:scale-105 group"
         >
           <MessageCircle className="w-6 h-6" />
           <span className="text-sm font-bold uppercase tracking-wide font-[family-name:var(--font-display)] hidden sm:inline">
@@ -102,7 +102,7 @@ export default function ChatWidget() {
 
       {/* Chat panel */}
       {open && (
-        <div className="fixed bottom-4 right-4 z-50 w-[380px] max-w-[calc(100vw-2rem)] h-[560px] max-h-[calc(100vh-2rem)] bg-white rounded-2xl shadow-2xl border border-[var(--gray-200)] flex flex-col overflow-hidden">
+        <div className="mobile-chat-panel fixed bottom-4 right-4 z-50 w-[380px] max-w-[calc(100vw-2rem)] h-[560px] max-h-[calc(100vh-2rem)] bg-white rounded-2xl shadow-2xl border border-[var(--gray-200)] flex flex-col overflow-hidden">
           {/* Header */}
           <div className="bg-[var(--red)] text-white px-4 py-3 flex items-center justify-between flex-shrink-0">
             <div className="flex items-center gap-3">

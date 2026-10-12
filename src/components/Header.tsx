@@ -353,6 +353,7 @@ export default function Header() {
   const [mobileAccordion, setMobileAccordion] = useState<string | null>(null)
   const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const navRef = useRef<HTMLElement>(null)
+  const mobileMenuButtonRef = useRef<HTMLButtonElement>(null)
   const triggerRefs = useRef<Map<string, HTMLElement>>(new Map())
 
   // Helper: generate stable IDs for ARIA linkage
@@ -367,10 +368,14 @@ export default function Header() {
         setActiveMega(null)
         trigger?.focus()
       }
+      if (e.key === 'Escape' && mobileMenuOpen) {
+        setMobileMenuOpen(false)
+        mobileMenuButtonRef.current?.focus()
+      }
     }
     document.addEventListener('keydown', handler)
     return () => document.removeEventListener('keydown', handler)
-  }, [activeMega])
+  }, [activeMega, mobileMenuOpen])
 
   // Close mega menu on outside click
   useEffect(() => {
@@ -541,6 +546,7 @@ export default function Header() {
                 aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
                 aria-expanded={mobileMenuOpen}
                 aria-controls="mobile-menu"
+                ref={mobileMenuButtonRef}
               >
                 {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
