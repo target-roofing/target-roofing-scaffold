@@ -14,6 +14,7 @@ function backendOrigin(value) {
 export function companyToolRewrites(env = process.env) {
   const routes = [];
   for (const [prefix, variable] of [
+    ['/office/marketing', 'MARKETING_BACKEND_ORIGIN'],
     ['/office', 'OFFICE_BACKEND_ORIGIN'],
     ['/radar', 'RADAR_BACKEND_ORIGIN'],
     ['/commissions', 'COMMISSIONS_BACKEND_ORIGIN'],
