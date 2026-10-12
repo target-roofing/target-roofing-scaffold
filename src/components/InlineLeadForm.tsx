@@ -131,7 +131,7 @@ export default function InlineLeadForm({
   }
 
   return (
-    <div className={`relative overflow-hidden rounded-lg p-6 sm:p-8 border-t-4 border-[var(--red)] ${bgClass}`}>
+    <div className={`lead-form relative overflow-hidden rounded-lg p-6 sm:p-8 border-t-4 border-[var(--red)] ${bgClass}`}>
       {/* Oversized reticle watermark, bleeding off the upper-right */}
       {darkTheme && (
         <Image

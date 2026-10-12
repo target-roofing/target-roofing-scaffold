@@ -161,7 +161,6 @@ function HeroSection() {
     motion.addEventListener('change', update)
     return () => {desktop.removeEventListener('change', update); motion.removeEventListener('change', update)}
   }, [])
-  const audiences = ['Homeowners', 'Property Managers', 'Property Owners', 'Condos/HOAs', 'Contractors']
 
   return (
     <section className="mobile-home-hero relative -mt-[7.5rem] min-h-screen lg:h-screen overflow-hidden flex items-center pt-36 pb-12 lg:pt-[7.5rem] lg:pb-0 bg-[var(--black)]">
@@ -182,94 +181,79 @@ function HeroSection() {
           loading="lazy"
         />}
         {/* Mobile fallback: no iframe/video load on small screens for performance */}
-        <div hidden={showBackgroundVideo} className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black">
+        <div hidden={showBackgroundVideo} className="hero-poster absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black">
           <Image
-            src="/images/backgrounds/hero-fallback.jpg"
-            alt="Target Roofing Background Fallback"
+            src="/images/crew/branded/04-team-on-roof.png"
+            alt=""
             fill
             priority
             sizes="100vw"
-            className="object-cover opacity-50"
+            className="hero-roof-image object-cover"
           />
         </div>
       </div>
 
       {/* Dark overlay */}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-black/85 via-black/70 to-black/85" />
+      <div className="hero-overlay absolute inset-0 z-[1]" />
 
       {/* Content */}
       <div className="relative z-[2] mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
         <div className="hero-content-grid grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Text Column */}
           <div className="col-span-1 lg:col-span-7 text-left text-white flex flex-col justify-center">
-            <h1 className="animate-fade-in-up mb-4 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl font-[family-name:var(--font-display)] uppercase leading-[0.82]">
+            <h1 className="hero-title mb-5 font-bold font-[family-name:var(--font-display)] uppercase">
               Extend Your Roof&apos;s Life<br />
-              <span className="text-[var(--red)]">With Expert Repairs</span>
+              <span>With Expert Repairs</span>
             </h1>
 
-            <p className="hidden sm:block animate-fade-in-up mb-6 text-base sm:text-lg text-white/90 leading-relaxed font-light font-[family-name:var(--font-body)]"
+            <p className="hidden sm:block mb-6 text-base sm:text-lg text-white/90 leading-relaxed font-light font-[family-name:var(--font-body)]"
                style={{ animationDelay: '0.15s' }}>
-              A small leak fixed today is a re-roof you don&apos;t pay for next year. We repair and maintain residential and commercial roofs across Southwest Florida &mdash; and when a roof truly is done, we&apos;ll show you the photos and manage the replacement ourselves.
+              We repair leaks and storm damage across Southwest Florida. Get a roof survey, clear pricing and a straight answer on whether you need a repair or replacement.
             </p>
 
             <p className="sm:hidden mb-5 text-base text-white/90 leading-relaxed">
-              Roof leaks, storm damage or routine maintenance? Get a roof survey and a clear repair estimate from your local Target Roofing team.
+              Roof leaks, storm damage or routine maintenance? Get a roof survey and clear repair estimate from your local team.
             </p>
 
-            <p className="animate-fade-in-up mb-6 text-sm sm:text-base font-semibold tracking-wide text-white/80 uppercase font-[family-name:var(--font-display)]"
+            <p className="hero-service-area mb-6 text-sm text-white/90"
               style={{ animationDelay: '0.2s' }}
             >
               Serving Fort Myers, Cape Coral, Naples &amp; Sarasota
             </p>
 
-            {/* Audience pills */}
-            <div
-              className="animate-fade-in-up mb-8 hidden sm:flex flex-wrap gap-2.5"
-              style={{ animationDelay: '0.3s' }}
-            >
-              {audiences.map((a) => (
-                <span
-                  key={a}
-                  className="rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider backdrop-blur-sm transition-colors hover:bg-[var(--red)] hover:border-[var(--red)]"
-                >
-                  {a}
-                </span>
-              ))}
-            </div>
-
             {/* CTAs */}
             <div
-              className="animate-fade-in-up flex flex-col gap-4 sm:flex-row"
+              className="flex flex-col gap-4 sm:flex-row"
               style={{ animationDelay: '0.4s' }}
             >
               <a
                 href="#hero-request"
-                className="inline-flex items-center justify-center gap-2 rounded bg-brand-gradient hover-bg-brand-gradient px-8 py-3.5 text-sm font-bold uppercase tracking-wider text-white shadow-lg transition-all hover:shadow-xl hover:scale-[1.02]"
+                className="hero-primary inline-flex items-center justify-center gap-2 rounded-md bg-[var(--red)] hover:bg-[var(--red-dark)] px-6 py-3.5 text-base font-semibold text-white"
               >
                 <Wrench className="h-4.5 w-4.5" />
-                Schedule Repair
+                Request a roof survey
               </a>
               <a
                 href="tel:+12393325707"
-                className="group hidden sm:inline-flex items-center justify-center gap-2 rounded border-2 border-white px-8 py-3.5 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-white hover:text-[var(--black)]"
+                className="hero-call hidden sm:inline-flex items-center justify-center gap-2 px-2 py-3.5 text-sm font-semibold text-white underline underline-offset-4"
               >
                 <CloudLightning className="h-4.5 w-4.5 transition-transform group-hover:scale-110" />
-                24/7 Emergency? Call Now
+                Call 239-332-5707
               </a>
             </div>
           </div>
 
           {/* Right Column: Lead Capture Form */}
           <div id="hero-request"
-            className="animate-fade-in-up col-span-1 lg:col-span-5 w-full relative z-10"
+            className="col-span-1 lg:col-span-5 w-full relative z-10"
             style={{ animationDelay: '0.45s' }}
           >
             <InlineLeadForm
               defaultService="repairs"
-              darkTheme={true}
-              title="Get a Roof Repair Survey"
-              subtitle="SWFL's local, reliable roofing experts. 24-hour response."
-              buttonText="Schedule Inspection Survey"
+              darkTheme={false}
+              title="Request a roof survey"
+              subtitle="Tell us what your roof needs."
+              buttonText="Send request"
               formId="hero"
               headingLevel={2}
             />
