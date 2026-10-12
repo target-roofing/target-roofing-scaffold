@@ -159,10 +159,10 @@ export default function InlineLeadForm({
           </div>
         )}
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-4">
           <div>
             <label htmlFor={`${formId}-firstName`} className={`block text-xs font-semibold mb-1 uppercase tracking-wider font-[family-name:var(--font-display)] ${labelClass}`}>
-              First Name <span className="text-[var(--red)]">*</span>
+              First name <span className="text-[var(--red)]">*</span>
             </label>
             <input
               type="text"
@@ -171,7 +171,7 @@ export default function InlineLeadForm({
               value={form.firstName}
               onChange={handleChange}
               className={inputClass('firstName')}
-              placeholder="First Name"
+              placeholder="First name"
               autoComplete="given-name"
               {...ariaProps('firstName', true)}
             />
@@ -183,7 +183,7 @@ export default function InlineLeadForm({
           </div>
           <div>
             <label htmlFor={`${formId}-lastName`} className={`block text-xs font-semibold mb-1 uppercase tracking-wider font-[family-name:var(--font-display)] ${labelClass}`}>
-              Last Name <span className="text-[var(--red)]">*</span>
+              Last name <span className="text-[var(--red)]">*</span>
             </label>
             <input
               type="text"
@@ -192,7 +192,7 @@ export default function InlineLeadForm({
               value={form.lastName}
               onChange={handleChange}
               className={inputClass('lastName')}
-              placeholder="Last Name"
+              placeholder="Last name"
               autoComplete="family-name"
               {...ariaProps('lastName', true)}
             />
@@ -251,7 +251,7 @@ export default function InlineLeadForm({
 
         <div>
           <label htmlFor={`${formId}-streetAddress`} className={`block text-xs font-semibold mb-1 uppercase tracking-wider font-[family-name:var(--font-display)] ${labelClass}`}>
-            Street Address <span className={`normal-case font-normal tracking-normal ${optionalClass}`}>(optional)</span>
+            Street address <span className={`normal-case font-normal tracking-normal ${optionalClass}`}>(optional)</span>
           </label>
           <input
             type="text"
@@ -295,7 +295,7 @@ export default function InlineLeadForm({
           </div>
           <div>
             <label htmlFor={`${formId}-zip`} className={`block text-xs font-semibold mb-1 uppercase tracking-wider font-[family-name:var(--font-display)] ${labelClass}`}>
-              ZIP Code <span className={`normal-case font-normal tracking-normal ${optionalClass}`}>(optional)</span>
+              ZIP code <span className={`normal-case font-normal tracking-normal ${optionalClass}`}>(optional)</span>
             </label>
             <input
               type="text"
@@ -351,7 +351,7 @@ export default function InlineLeadForm({
           </div>
           <div className="sm:col-span-2">
             <label htmlFor={`${formId}-message`} className={`block text-xs font-semibold mb-1 uppercase tracking-wider font-[family-name:var(--font-display)] ${labelClass}`}>
-              Describe Needs <span className="text-[var(--red)]">*</span>
+              What does your roof need? <span className="text-[var(--red)]">*</span>
             </label>
             <input
               type="text"

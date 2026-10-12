@@ -90,13 +90,12 @@ export default function ChatWidget() {
         <button
           aria-label="Chat with Target Roofing"
           onClick={() => setOpen(true)}
-          className="mobile-chat-trigger fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-[var(--red)] hover:bg-[var(--red-dark)] text-white px-5 py-3.5 rounded-full shadow-2xl transition-all hover:scale-105 group"
+          className="mobile-chat-trigger fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-[var(--red)] hover:bg-[var(--red-dark)] text-white px-5 py-3.5 rounded-full shadow-lg transition-colors"
         >
           <MessageCircle className="w-6 h-6" />
-          <span className="text-sm font-bold uppercase tracking-wide font-[family-name:var(--font-display)] hidden sm:inline">
+          <span className="text-sm font-semibold font-[family-name:var(--font-display)] hidden sm:inline">
             Chat with us
           </span>
-          <span className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white animate-pulse" />
         </button>
       )}
 
