@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
+import {useConsoleHref} from '@/app/admin/_ops/ConsoleContext'
 import ReactMarkdown from 'react-markdown'
 import { createClient } from '@supabase/supabase-js'
 import { Calendar, Check, CheckCircle2, Circle, Copy, ExternalLink, Heart, Loader2, Mic, Plus, Rss, Sparkles, ThumbsDown, Upload, HelpCircle } from 'lucide-react'
@@ -27,6 +28,7 @@ const PIPELINE = [
 ]
 
 export default function PodcastPage() {
+  const href=useConsoleHref()
   const [state, setState] = useState<State | null>(null)
   const [members, setMembers] = useState<Member[]>([])
   const [voter, setVoter] = useState('')
@@ -176,7 +178,7 @@ export default function PodcastPage() {
 
       <div className="mb-6 grid gap-6 lg:grid-cols-3">
         {/* ── Prep tasks ── */}
-        <Card title="Before we record" className="lg:col-span-1" right={<Link href="/admin/tasks" className="text-xs font-bold text-[var(--red)] underline">All tasks</Link>}>
+        <Card title="Before we record" className="lg:col-span-1" right={<Link href={href("/admin/tasks")} className="text-xs font-bold text-[var(--red)] underline">All tasks</Link>}>
           {podTasks.length === 0 ? <p className="text-sm text-[var(--gray-500)]">No podcast tasks yet.</p> : (
             <div className="space-y-4">
               {members.filter((m) => podTasks.some((t) => t.assignee_id === m.id)).concat(podTasks.some((t) => !t.assignee_id) ? [{ id: '', name: 'Unassigned' } as Member] : []).map((m) => (
