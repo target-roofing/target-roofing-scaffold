@@ -2,6 +2,7 @@
 
 import { use, useCallback, useEffect, useState } from 'react'
 import Link from 'next/link'
+import {useConsoleHref} from '@/app/admin/_ops/ConsoleContext'
 import { useRouter } from 'next/navigation'
 import { ArrowLeft, Check, Loader2, RefreshCw, Trash2, UserPlus, X } from 'lucide-react'
 import { opsAcceptSuggestion, opsCreateMember, opsDeleteMeeting, opsDismissSuggestion, opsGetMeeting, opsListMembers } from '../../_ops/actions'
@@ -10,6 +11,7 @@ import type { Member } from '@/lib/ops/tasks'
 import type { Meeting, Suggestion } from '@/lib/ops/meetings'
 
 export default function MeetingDetail({ params }: { params: Promise<{ id: string }> }) {
+  const href=useConsoleHref()
   const { id } = use(params)
   const router = useRouter()
   const [meeting, setMeeting] = useState<Meeting | null>(null)
@@ -56,7 +58,7 @@ export default function MeetingDetail({ params }: { params: Promise<{ id: string
   }
   const remove = async () => {
     if (!confirm('Delete this meeting? Tasks already created stay on the task list.')) return
-    await opsDeleteMeeting(id); router.push('/admin/meetings')
+    await opsDeleteMeeting(id); router.push(href('/admin/meetings'))
   }
 
   if (!meeting) return <p className="text-sm text-[var(--gray-400)]">Loading...</p>
@@ -67,7 +69,7 @@ export default function MeetingDetail({ params }: { params: Promise<{ id: string
 
   return (
     <div>
-      <Link href="/admin/meetings" className="mb-3 inline-flex items-center gap-1 text-xs font-bold text-[var(--gray-500)] hover:text-[var(--red)]"><ArrowLeft className="h-3.5 w-3.5" />All meetings</Link>
+      <Link href={href("/admin/meetings")} className="mb-3 inline-flex items-center gap-1 text-xs font-bold text-[var(--gray-500)] hover:text-[var(--red)]"><ArrowLeft className="h-3.5 w-3.5" />All meetings</Link>
       <PageHeader title={meeting.title} subtitle={`${fmtDate(meeting.occurred_at, true)} · via ${meeting.source}`}>
         <button className={btnGhost} onClick={reparse} disabled={busy || working}>{busy || working ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <RefreshCw className="h-3.5 w-3.5" />}{working ? meeting.status : 'Re-analyze'}</button>
         <button className={btnGhost} onClick={remove}><Trash2 className="h-3.5 w-3.5" />Delete</button>
@@ -106,7 +108,7 @@ export default function MeetingDetail({ params }: { params: Promise<{ id: string
             )}
           </Card>
 
-          <Card title={`Added to the task list (${accepted.length})`} right={<Link href="/admin/tasks" className="text-xs font-bold text-[var(--red)] underline">Open tasks</Link>}>
+          <Card title={`Added to the task list (${accepted.length})`} right={<Link href={href("/admin/tasks")} className="text-xs font-bold text-[var(--red)] underline">Open tasks</Link>}>
             {accepted.length === 0 ? <p className="text-sm text-[var(--gray-500)]">None yet.</p> : (
               <ul className="divide-y divide-[var(--gray-100)] -my-2">
                 {accepted.map((s) => (

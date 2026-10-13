@@ -1,6 +1,8 @@
 import 'server-only'
 import { cookies } from 'next/headers'
 import { createHmac, timingSafeEqual } from 'crypto'
+import {cache} from 'react'
+import {officeSessionCookies,resolveAdminSession} from './office-admin-client.mjs'
 
 // Signed admin session cookie. Replaces the old client-state-only login so every
 // admin route (sidebar pages, uploads, server actions) can check the same session.
@@ -34,10 +36,10 @@ export function readSessionValue(value: string | undefined | null): { email: str
   } catch { return null }
 }
 
-export async function getAdminSession() {
+export const getAdminSession = cache(async () => {
   const jar = await cookies()
-  return readSessionValue(jar.get(ADMIN_COOKIE)?.value)
-}
+  return resolveAdminSession({cookieHeader:jar.getAll().map(c=>c.name+'='+c.value).join('; '),officeOrigin:process.env.OFFICE_BACKEND_ORIGIN,legacySession:readSessionValue(jar.get(ADMIN_COOKIE)?.value)})
+})
 
 export async function setAdminSession(email: string) {
   const jar = await cookies()
@@ -47,6 +49,8 @@ export async function setAdminSession(email: string) {
 export async function clearAdminSession() {
   const jar = await cookies()
   jar.delete(ADMIN_COOKIE)
+  const officeCookies=officeSessionCookies(jar.getAll().map(c=>c.name+'='+c.value).join('; '))
+  for(const part of officeCookies.split('; ').filter(Boolean))jar.set(part.slice(0,part.indexOf('=')),'',{httpOnly:true,secure:true,sameSite:'lax',path:'/',maxAge:0})
 }
 
 export async function requireAdmin() {

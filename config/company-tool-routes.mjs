@@ -21,6 +21,10 @@ export function companyToolRewrites(env = process.env) {
   ]) {
     const origin = backendOrigin(env[variable]);
     if (!origin) continue;
+    if (prefix === '/office') {
+      routes.push({ source: '/office/administration', destination: '/admin' });
+      routes.push({ source: '/office/administration/:path+', destination: '/admin/:path+' });
+    }
     routes.push({ source: prefix, destination: `${origin}${prefix}` });
     routes.push({ source: `${prefix}/:path+`, destination: `${origin}${prefix}/:path+` });
     if (prefix === '/office') {

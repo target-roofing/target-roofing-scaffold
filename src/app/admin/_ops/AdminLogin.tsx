@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import { Shield } from 'lucide-react'
 import { verifyAdminLogin } from '@/app/actions'
 
-export default function AdminLogin() {
+export default function AdminLogin({googleLogin='/office/login?next=%2Foffice%2Fadministration'}:{googleLogin?:string}) {
   const router = useRouter()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -32,6 +32,7 @@ export default function AdminLogin() {
           <h1 className="text-3xl font-bold font-[family-name:var(--font-display)] uppercase tracking-tight text-[var(--black)]">Target Management</h1>
           <p className="text-xs text-[var(--gray-400)] font-semibold mt-1">Target Roofing Administrative Console</p>
         </div>
+        <a href={googleLogin} className="mb-6 flex w-full items-center justify-center rounded-lg bg-[var(--red)] px-4 py-3 text-sm font-bold text-white">Continue with your Office Google account</a>
         <form onSubmit={handleSubmit} className="space-y-5">
           {error && <div className="p-4 bg-red-50 border-l-4 border-red-500 rounded text-red-700 text-xs font-semibold">{error}</div>}
           <div>

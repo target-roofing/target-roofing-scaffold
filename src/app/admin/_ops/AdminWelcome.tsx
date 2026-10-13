@@ -5,6 +5,7 @@ import { useEffect, useRef } from 'react'
 import { ArrowRight, X } from 'lucide-react'
 import { ADMIN_SECTIONS } from './nav'
 import { AddToolIcon } from './icons'
+import {useConsoleHref} from './ConsoleContext'
 
 /** localStorage key that marks the guide as seen in this browser. Bump the suffix to show it again after big changes. */
 export const WELCOME_SEEN_KEY = 'tr-admin-welcome-v1'
@@ -20,6 +21,7 @@ export function markWelcomeSeen() {
 /** First-visit guide: what each admin page does and what it is good for. */
 export default function AdminWelcome({ onClose }: { onClose: () => void }) {
   const dialogRef = useRef<HTMLDivElement>(null)
+  const href=useConsoleHref()
 
   useEffect(() => {
     dialogRef.current?.focus()
@@ -57,7 +59,7 @@ export default function AdminWelcome({ onClose }: { onClose: () => void }) {
                 {section.items.map((item) => {
                   const Icon = item.icon
                   return (
-                    <Link key={item.href} href={item.href} onClick={onClose}
+                    <Link key={item.href} href={href(item.href)} onClick={onClose}
                       className="group flex gap-4 rounded-xl border border-[var(--gray-200)] p-4 transition hover:border-[var(--red)] hover:shadow-sm">
                       <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-red-50 text-[var(--red)]">
                         <Icon className="h-6 w-6" />
@@ -77,7 +79,7 @@ export default function AdminWelcome({ onClose }: { onClose: () => void }) {
             </section>
           ))}
 
-          <Link href="/admin/build" onClick={onClose}
+          <Link href={href("/admin/build")} onClick={onClose}
             className="mt-7 flex flex-col gap-4 rounded-xl bg-[var(--black)] p-5 text-white sm:flex-row sm:items-center">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[var(--red)]"><AddToolIcon className="h-6 w-6" /></span>
             <span className="flex-1">
