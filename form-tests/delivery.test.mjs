@@ -75,7 +75,7 @@ test('shared contact page keeps explicit estimate intent, including CTA query st
 
 for (const [name, input, recipient, formName] of [
   ['Contact Us', { ...contact, source: 'contact-page' }, 'service@targetroofers.com', 'Contact Us'],
-  ['Free Estimate', { ...contact, source: 'estimate' }, 'projects@targetroofers.com', 'Free Estimate'],
+  ['Free Estimate', { ...contact, service: 'reroofing', source: 'estimate' }, 'projects@targetroofers.com', 'Free Estimate'],
   ['Free Estimate chosen on Contact Us', { ...contact, source: 'contact-page', service: 'free-estimate' }, 'projects@targetroofers.com', 'Free Estimate'],
 ]) {
   test(`${name}: saves first, then notifies the intended recipient with customer reply-to`, async () => {
@@ -92,6 +92,54 @@ for (const [name, input, recipient, formName] of [
     assert.ok(h.messages[0].fields.some(([field, value]) => field === 'Lead ID' && value === result.leadId))
   })
 }
+
+for (const service of ['repairs', 'roof-repair', 'emergency-storm-repair']) {
+  test(`${service} requested through an estimate form notifies Service after saving`, async () => {
+    const h = harness()
+    const result = await h.actions.submitContactLead({ ...contact, service, source: 'estimate' })
+    assert.equal(result.notified, true)
+    assert.deepEqual(h.order, ['save', 'notify'])
+    assert.deepEqual(h.messages[0].to, ['service@targetroofers.com'])
+    assert.equal(h.messages[0].replyTo, 'customer@example.com')
+    assert.equal(h.messages[0].subject, 'Website Lead')
+    assert.equal(h.messages[0].heading, 'New estimate request from the website')
+    assert.ok(h.messages[0].fields.some(([label, value]) => label === 'Page' && value === 'Estimate form'))
+    assert.equal(h.inserts[0].record.service, service)
+    assert.match(h.inserts[0].record.message, /Website form: Free Estimate/)
+  })
+}
+
+test('repair routing normalizes the selection and keeps Contact Us identity', async () => {
+  const h = harness()
+  await h.actions.submitContactLead({ ...contact, service: ' REPAIRS ', source: 'contact-page' })
+  assert.deepEqual(h.messages[0].to, ['service@targetroofers.com'])
+  assert.equal(h.messages[0].subject, 'Target Roofing - New submission from Contact US')
+  assert.match(h.inserts[0].record.message, /Website form: Contact Us/)
+  assert.equal(h.inserts[0].record.service, ' REPAIRS ')
+})
+
+test('repair selections without a source use Service and preserve the default estimate identity', async () => {
+  const h = harness()
+  await h.actions.submitContactLead({ ...contact, service: ' REPAIRS ' })
+  assert.deepEqual(h.messages[0].to, ['service@targetroofers.com'])
+  assert.equal(h.messages[0].subject, 'Website Lead')
+  assert.match(h.inserts[0].record.message, /Website form: Free Estimate/)
+})
+
+for (const service of ['reroofing', 'new-roofs', 'inspection', 'maintenance-plans', 'repairs-estimate', 'service@outside.example']) {
+  test(`${service} on an estimate form keeps Projects despite repair words in the message`, async () => {
+    const h = harness({ env: { CONTACT_NOTIFY_TO: 'service-team@example.com', LEAD_NOTIFY_TO: 'sales@example.com' } })
+    await h.actions.submitContactLead({ ...contact, service, source: 'estimate', message: 'Replacement quote for a roof with leaks and previous repairs' })
+    assert.deepEqual(h.messages[0].to, ['sales@example.com'])
+  })
+}
+
+test('repair estimates preserve the configured Service recipient and phone-only reply address', async () => {
+  const h = harness({ env: { CONTACT_NOTIFY_TO: 'service-team@example.com', LEAD_NOTIFY_TO: 'sales@example.com' } })
+  await h.actions.submitContactLead({ ...contact, service: 'repairs', source: 'estimate', email: '' })
+  assert.deepEqual(h.messages[0].to, ['service-team@example.com'])
+  assert.equal(h.messages[0].replyTo, 'service-team@example.com')
+})
 
 for (const [source, recipient, service] of [
   ['softwash', 'service@targetroofers.com', 'Softwash'],
@@ -216,4 +264,79 @@ test('missing credentials, rejected sends, and timeouts return an explicit notif
   const timeout = smtpHarness(() => new Promise(() => {}), { timeoutNow: true })
   assert.equal((await timeout.notify.sendNotification(notice)).sent, false)
   assert.deepEqual(timeout.cleared, [1])
+})
+
+function chatHarness(leadData, { env = {}, mailSent = true, saveError = null } = {}) {
+  const inserts = [], messages = [], order = [], modelInstructions = []
+  const notify = load('src/lib/notify.ts', { 'server-only': {}, nodemailer: {} })
+  const markers = load('src/lib/chat-lead-marker.ts')
+  class GoogleGenAI {
+    models = { generateContent: async request => {
+      modelInstructions.push(request.config.systemInstruction)
+      return { text: `[SUBMIT_LEAD:${JSON.stringify(leadData)}]` }
+    } }
+  }
+  const mocks = {
+    'next/server': { NextResponse: { json: (body, options) => ({ body: plain(body), status: options?.status ?? 200 }) } },
+    '@google/genai': { GoogleGenAI },
+    '@/lib/chat-lead-marker': markers,
+    '@/lib/supabase': { supabase: { from: table => ({ insert: record => {
+      order.push('save'); inserts.push({ table, record: plain(record) })
+      return { select: () => ({ single: async () => ({ data: saveError ? null : { id: 'chat-test-1' }, error: saveError }) }) }
+    } }) } },
+    '@/lib/notify': { recipientList: notify.recipientList, sendNotification: async message => {
+      order.push('notify'); messages.push(plain(message)); return { sent: mailSent, error: mailSent ? undefined : 'Test-only SMTP failure' }
+    } },
+  }
+  return { ...load('src/app/api/chat/route.ts', mocks, { process: { env: { GOOGLE_AI_API_KEY: 'mock-only', ...env } } }), inserts, messages, order, modelInstructions }
+}
+
+const chatLead = { firstName: 'Test', lastName: 'Customer', email: 'customer@example.com', phone: '202-555-0123', address: 'TEST ONLY', roofType: 'Metal', issue: 'Leaking roof' }
+const chatRequest = { json: async () => ({ messages: [{ role: 'user', content: 'TEST ONLY' }] }) }
+
+test('structured repair chatbot requests notify Service and retain save order, subject and customer Reply-To', async () => {
+  const h = chatHarness({ ...chatLead, requestType: 'service' })
+  const response = await h.POST(chatRequest)
+  assert.deepEqual(h.order, ['save', 'notify'])
+  assert.deepEqual(h.messages[0].to, ['service@targetroofers.com'])
+  assert.equal(h.messages[0].replyTo, 'customer@example.com')
+  assert.equal(h.messages[0].subject, 'Website Lead - Chatbot')
+  assert.equal(h.inserts[0].record.service, 'Metal')
+  assert.equal(response.body.lead.notified, true)
+  assert.match(h.modelInstructions[0], /requestType/)
+})
+
+for (const requestType of ['estimate', undefined, 'unknown', 'service@outside.example', 'Service', ' service ', null, true, ['service'], { type: 'service' }]) {
+  test(`chatbot ${String(requestType)} request retains the existing projects recipient`, async () => {
+    const h = chatHarness({ ...chatLead, requestType })
+    await h.POST(chatRequest)
+    assert.deepEqual(h.messages[0].to, ['projects@targetroofers.com'])
+  })
+}
+
+test('structured chatbot Service route honors existing recipient configuration', async () => {
+  const h = chatHarness({ ...chatLead, requestType: 'service' }, { env: { CONTACT_NOTIFY_TO: 'service-team@example.com', LEAD_NOTIFY_TO: 'sales@example.com' } })
+  await h.POST(chatRequest)
+  assert.deepEqual(h.messages[0].to, ['service-team@example.com'])
+})
+
+test('chatbot estimates honor configured Projects recipients', async () => {
+  const h = chatHarness({ ...chatLead, requestType: 'estimate' }, { env: { CONTACT_NOTIFY_TO: 'service-team@example.com', LEAD_NOTIFY_TO: 'sales@example.com' } })
+  await h.POST(chatRequest)
+  assert.deepEqual(h.messages[0].to, ['sales@example.com'])
+})
+
+test('chatbot notification failure keeps the saved lead and reports notified=false', async () => {
+  const h = chatHarness({ ...chatLead, requestType: 'service' }, { mailSent: false })
+  const response = await h.POST(chatRequest)
+  assert.equal(h.inserts.length, 1)
+  assert.equal(response.body.lead.notified, false)
+  assert.match(response.body.message, /could not notify/)
+})
+
+test('chatbot save failure never attempts a notification', async () => {
+  const h = chatHarness({ ...chatLead, requestType: 'service' }, { saveError: { message: 'Test-only database failure' } })
+  const response = await h.POST(chatRequest)
+  assert.equal(response.status, 500)
+  assert.deepEqual(h.messages, [])
 })

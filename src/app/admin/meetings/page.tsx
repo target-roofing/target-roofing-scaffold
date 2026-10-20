@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
+import {useConsoleHref} from '@/app/admin/_ops/ConsoleContext'
 import { useRouter } from 'next/navigation'
 import { createClient } from '@supabase/supabase-js'
 import { AudioLines, ClipboardPaste, FileAudio, Send, Webhook, MessageCircle, Loader2 } from 'lucide-react'
@@ -12,6 +13,7 @@ type Row = Awaited<ReturnType<typeof opsListMeetings>>[number]
 const browserDb = () => createClient(process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://rciyoqdtejxcjqnvbsoi.supabase.co', process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'x')
 
 export default function MeetingsPage() {
+  const href=useConsoleHref()
   const router = useRouter()
   const [rows, setRows] = useState<Row[]>([])
   const [mode, setMode] = useState<'paste' | 'upload'>('paste')
@@ -31,7 +33,7 @@ export default function MeetingsPage() {
     const r = await fetch(`/api/meetings/${id}/process`, { method: 'POST' })
     const j = await r.json().catch(() => ({}))
     if (!r.ok || !j.ok) setError(j.error || `Processing failed (${r.status})`)
-    router.push(`/admin/meetings/${id}`)
+    router.push(href(`/admin/meetings/${id}`))
   }
 
   const submit = async (e: React.FormEvent) => {
@@ -107,7 +109,7 @@ export default function MeetingsPage() {
       <div className="space-y-2">
         {rows.length === 0 && <p className="text-sm text-[var(--gray-500)]">No meetings yet.</p>}
         {rows.map((m) => (
-          <Link key={m.id} href={`/admin/meetings/${m.id}`} className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-[var(--gray-200)] bg-white px-5 py-4 shadow-sm hover:border-[var(--red)]">
+          <Link key={m.id} href={href(`/admin/meetings/${m.id}`)} className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-[var(--gray-200)] bg-white px-5 py-4 shadow-sm hover:border-[var(--red)]">
             <div className="min-w-0">
               <p className="font-semibold text-sm text-[var(--black)]">{m.title}</p>
               <p className="text-xs text-[var(--gray-500)]">{fmtDate(m.occurred_at, true)} · via {m.source}</p>

@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
+import {useConsoleHref} from '@/app/admin/_ops/ConsoleContext'
 import { CheckCircle2, Circle, CircleDot, Plus, Trash2, UserPlus, RefreshCw } from 'lucide-react'
 import { opsCreateMember, opsCreateTask, opsDeleteTask, opsListMembers, opsListTasks, opsUpdateTask } from '../_ops/actions'
 import { Card, PageHeader, Pill, btnGhost, btnPrimary, fmtDate, inputCls } from '../_ops/ui'
@@ -10,6 +11,7 @@ import type { Member, Task, TaskStatus } from '@/lib/ops/tasks'
 const STATUS_NEXT: Record<TaskStatus, TaskStatus> = { todo: 'in_progress', in_progress: 'done', done: 'todo' }
 
 export default function TasksPage() {
+  const href=useConsoleHref()
   const [tasks, setTasks] = useState<Task[]>([])
   const [members, setMembers] = useState<Member[]>([])
   const [loading, setLoading] = useState(true)
@@ -122,7 +124,7 @@ export default function TasksPage() {
       </Card>
 
       {loading ? <p className="text-sm text-[var(--gray-400)]">Loading tasks...</p> : groups.length === 0 ? (
-        <p className="text-sm text-[var(--gray-500)]">Nothing here. Paste a meeting into <Link href="/admin/meetings" className="font-bold text-[var(--red)] underline">Meeting Intelligence</Link> to pull tasks out of it.</p>
+        <p className="text-sm text-[var(--gray-500)]">Nothing here. Paste a meeting into <Link href={href("/admin/meetings")} className="font-bold text-[var(--red)] underline">Meeting Intelligence</Link> to pull tasks out of it.</p>
       ) : (
         <div className="space-y-6">
           {groups.map((g) => (
@@ -145,7 +147,7 @@ export default function TasksPage() {
                             {t.due_date && <span className={overdue ? 'font-bold text-red-600' : ''}>Due {fmtDate(t.due_date)}</span>}
                             {(t.tags || []).map((x) => <span key={x} className="text-[var(--gray-400)]">#{x}</span>)}
                             {t.source !== 'manual' && <span className="text-[var(--gray-400)]">via {t.source}</span>}
-                            {t.meeting_id && <Link href={`/admin/meetings/${t.meeting_id}`} className="text-[var(--red)] underline">meeting</Link>}
+                            {t.meeting_id && <Link href={href(`/admin/meetings/${t.meeting_id}`)} className="text-[var(--red)] underline">meeting</Link>}
                           </div>
                           {editing === t.id && (
                             <div className="mt-3 grid gap-2 rounded-lg bg-[var(--gray-50)] p-3 sm:grid-cols-2">
