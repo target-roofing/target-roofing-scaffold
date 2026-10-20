@@ -62,6 +62,7 @@ export interface LeadRecord {
 //   contact page  -> Contact US (Gravity Form 1)            -> CONTACT_NOTIFY_TO (service@)
 //   estimate forms-> Free Estimate / Short Form (Forms 8, 7) -> LEAD_NOTIFY_TO (projects@)
 //   softwash      -> Softwash plugin form                    -> SOFTWASH_NOTIFY_TO
+// Explicit repair/emergency selections use CONTACT_NOTIFY_TO on either contact entry point.
 async function notifyNewLead(
   formType: 'contact' | 'softwash',
   data: Record<string, string | undefined>,
@@ -92,7 +93,8 @@ async function notifyNewLead(
     })
   } else {
     const fromContactPage = data.source === 'contact-page'
-    const to = recipientList(fromContactPage
+    const serviceRequest = ['repairs', 'roof-repair', 'emergency-storm-repair'].includes((data.service || '').trim().toLowerCase())
+    const to = recipientList(fromContactPage || serviceRequest
       ? process.env.CONTACT_NOTIFY_TO || 'service@targetroofers.com'
       : process.env.LEAD_NOTIFY_TO || 'projects@targetroofers.com')
     result = await sendNotification({
@@ -161,7 +163,7 @@ export async function submitContactLead(formData: {
   message: string
   /** Ad attribution (UTMs + OpenAI click id), captured client-side. Stored with the lead. */
   attribution?: string
-  /** Which form sent it: decides who gets the notification. Defaults to an estimate form. */
+  /** Form identity and default route; repair/emergency selections override the recipient. */
   source?: 'contact-page' | 'estimate'
 }) {
   const errors: Record<string, string> = {}
