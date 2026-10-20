@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
-import { Suspense, useCallback, useEffect, useState } from 'react'
+import { Suspense, useCallback, useEffect, useRef, useState } from 'react'
 import { LogOut, Menu } from 'lucide-react'
 import { logoutAdmin } from '@/app/actions'
 import {ConsoleSurfaceContext,useConsoleHref,type ConsoleSurface} from './ConsoleContext'
@@ -51,6 +51,25 @@ function Nav({ onNavigate }: { onNavigate?: () => void }) {
 export default function AdminShell({ email, children,surface='console' }: { email: string; children: React.ReactNode;surface?:ConsoleSurface }) {
   const router = useRouter()
   const [open, setOpen] = useState(false)
+  const menuToggle = useRef<HTMLButtonElement>(null)
+  const menuPanel = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    if (!open) return
+    const panel = menuPanel.current
+    const controls = () => Array.from(panel?.querySelectorAll<HTMLElement>('a[href],button:not([disabled]),[tabindex="0"]') ?? []).filter(el => el.getClientRects().length)
+    controls()[0]?.focus()
+    function keydown(event: KeyboardEvent) {
+      if (event.key === 'Escape') { event.preventDefault(); setOpen(false) }
+      if (event.key === 'Tab') {
+        const items = controls(), first = items[0], last = items.at(-1)
+        if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus() }
+        else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus() }
+      }
+    }
+    panel?.addEventListener('keydown', keydown)
+    return () => { panel?.removeEventListener('keydown', keydown); menuToggle.current?.focus() }
+  }, [open])
+
   const [guideOpen, setGuideOpen] = useState(false)
   const logout = async () => { await logoutAdmin(); router.refresh() }
 
@@ -94,14 +113,14 @@ export default function AdminShell({ email, children,surface='console' }: { emai
     <ConsoleSurfaceContext.Provider value={surface}><div className="fixed inset-0 z-[100] flex bg-[var(--gray-50)]">
       <aside className="hidden lg:block w-64 shrink-0">{sidebar()}</aside>
       {open && (
-        <div className="lg:hidden fixed inset-0 z-[110] flex">
+        <div ref={menuPanel} id="admin-mobile-menu" role="dialog" aria-modal="true" aria-label="Admin navigation" className="lg:hidden fixed inset-0 z-[110] flex">
           <div className="w-72 max-w-[85vw]">{sidebar(() => setOpen(false))}</div>
           <button aria-label="Close menu" className="flex-1 bg-black/50" onClick={() => setOpen(false)} />
         </div>
       )}
       <div className="flex-1 min-w-0 flex flex-col">
         <header className="lg:hidden flex items-center justify-between bg-[var(--black)] text-white px-4 py-3">
-          <button aria-label="Open menu" onClick={() => setOpen(true)} className="p-2 -ml-2"><Menu className="h-5 w-5" /></button>
+          <button ref={menuToggle} aria-label="Open menu" aria-expanded={open} aria-controls="admin-mobile-menu" style={{minWidth:44,minHeight:44}} onClick={() => setOpen(true)} className="p-2 -ml-2"><Menu className="h-5 w-5" /></button>
           <span className="text-sm font-bold uppercase tracking-wider font-[family-name:var(--font-display)]">{surface==='office'?'Admin tools':'Target Admin'}</span>
           <a href="/office" className="text-xs font-semibold text-white/80">Office</a>
         </header>
