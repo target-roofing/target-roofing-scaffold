@@ -10,12 +10,21 @@ notification recipient; it does not prove inbox delivery or a successful reply.
 | Free Estimate | projects@targetroofers.com | Customer email; office if absent | leads |
 | Softwash | service@targetroofers.com | Customer email; office if absent | leads |
 | Roof Cleaning Estimate | projects@targetroofers.com | Customer email; office if absent | leads |
+| Chatbot | projects@targetroofers.com; Service category uses service@targetroofers.com | Customer email | leads |
 | Prospect Intake | Assigned salesperson plus projects@targetroofers.com | admin@targetroofers.com | prospect_intakes |
 
 Free Estimate links use `/contact?service=free-estimate`. Selecting Free Estimate
 on Contact Us also selects the estimate route. Other Contact Us submissions use
 the service route. Estimate forms embedded on other pages already use the
 estimate route.
+
+Explicit repair/emergency selections (`repairs`, `roof-repair`, and
+`emergency-storm-repair`) notify Service even when submitted through an estimate
+form. The original form identity and subject are retained. Chatbot lead markers
+use `requestType: "service"` for repair/leak/emergency requests and `"estimate"`
+otherwise. The server recognizes only `"service"`; missing or unknown values
+retain the existing projects route. Routing recognizes a bounded structured
+category, not email addresses or loose words in the customer's issue.
 
 `/roof-cleaning-system` redirects to `/softwash?request=roof-cleaning`. Its Schedule
 Today link stays on that page's quote form, retaining the query. Roof Cleaning and
@@ -44,11 +53,15 @@ value takes precedence over the defaults above.
 
 ## Validation and release
 
-Run `npm run test:forms`, `npm run test:security`, and `npm run build` on the feature
-branch. Keep the production branch unchanged until review and acceptance.
+Run `node --test form-tests/*.test.mjs security-tests/*.test.mjs seo-tests/*.test.mjs scripts/*.test.mjs`,
+`npx tsc --noEmit --incremental false`, and `npm run build` on the feature branch.
+The standalone type check is required because the existing build configuration
+skips type errors. Local routing tests mock the model, database and mail provider.
+Keep the production branch unchanged until review and acceptance.
 
 On a reviewed preview or controlled production test, use a unique TEST label and
-an authorized customer test inbox. For each of the five routes:
+an authorized customer test inbox. For each of the six routes, including both
+Service and estimate categories on embedded forms and the chatbot:
 
 1. Submit through its actual page/link and record the returned saved ID.
 2. Find that exact ID in the company Supabase project, including form identity.

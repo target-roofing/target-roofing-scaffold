@@ -1,3 +1,5 @@
+> Current hosting, source provenance and recovery boundaries: [Maintenance guide](docs/MAINTENANCE.md). Older migration instructions below are historical where they differ from that guide.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

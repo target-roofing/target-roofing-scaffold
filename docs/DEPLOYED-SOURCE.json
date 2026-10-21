@@ -1,0 +1,2129 @@
+{
+  "observed_at": "2026-10-21",
+  "deployment_id": "dpl_4TNoqLatb6HBpeUAb29hQiqgkvLN",
+  "source_files": [
+    {
+      "path": "config/company-tool-routes.mjs",
+      "git_blob_sha": "1a152ebd6002d5a3da92655cba9b300f7ff2fbe2",
+      "deployment_sha1": "5842fe841ab0cf09aaffd1c4664ec909aeae84e2"
+    },
+    {
+      "path": "docs/form-routing.md",
+      "git_blob_sha": "36c6fb48eab417315af698259719a825927060b9",
+      "deployment_sha1": "b4aed7f7c24de42a8059ed5bc19cf087e155eb70"
+    },
+    {
+      "path": "docs/seo-first-batch.md",
+      "git_blob_sha": "316daa75dc5e7ae0d3590f7ccbf630cc17a3b843",
+      "deployment_sha1": "387a433e06991c519f0a13451152e73fd44cc59b"
+    },
+    {
+      "path": "eslint.config.mjs",
+      "git_blob_sha": "b4b6312a43eb8d31c67b9bb7f1db757402ef4391",
+      "deployment_sha1": "7e3279d1eb04685860008dcc26834d6782f22a19"
+    },
+    {
+      "path": "form-tests/delivery.test.mjs",
+      "git_blob_sha": "cffd8e9eab3fe9a721e367090c8c0bfddbdb7d18",
+      "deployment_sha1": "127db68078409684e8510cd854b399d581c65090"
+    },
+    {
+      "path": "next.config.ts",
+      "git_blob_sha": "110da6d76e7e7d5662acb44db03670559ed2d9cb",
+      "deployment_sha1": "d391e77edb7bc753fb226a4567c6259c5e98da00"
+    },
+    {
+      "path": "package-lock.json",
+      "git_blob_sha": "ce6b37403f3a6239c1453755a981c6d1d34f18f7",
+      "deployment_sha1": "5211236228f0a29fa05671c2c83c77308c1d2ea9"
+    },
+    {
+      "path": "package.json",
+      "git_blob_sha": "dcb5c9d95a2ceb7333ca978d9894ad519419015e",
+      "deployment_sha1": "b3ab75652b280edb23feff6bbc363ec233a81c4f"
+    },
+    {
+      "path": "playwright.config.ts",
+      "git_blob_sha": "32e741a4625ecf7ac783402ad6bbbe21bdb4bd1d",
+      "deployment_sha1": "c3e4aa59868cdd38d3da23025a89a73005d782b4"
+    },
+    {
+      "path": "postcss.config.mjs",
+      "git_blob_sha": "61e36849cf7cfa9f1f71b4a3964a4953e3e243d3",
+      "deployment_sha1": "8f8be689e9af58f80351df6e6b551146822f42a4"
+    },
+    {
+      "path": "public/file.svg",
+      "git_blob_sha": "004145cddf3f9db91b57b9cb596683c8eb420862",
+      "deployment_sha1": "fb380eeffe87d50b597383664c02982964d0d28c"
+    },
+    {
+      "path": "public/globe.svg",
+      "git_blob_sha": "567f17b0d7c7fb662c16d4357dd74830caf2dccb",
+      "deployment_sha1": "2eba23b01a46733bb8423e6d38ebf5f7e95abec5"
+    },
+    {
+      "path": "public/images/backgrounds/bg-aerial-mono.jpg",
+      "git_blob_sha": "bb582dc5f7e80181baa3ca24ddff333771ca7a05",
+      "deployment_sha1": "09508e24d58fddff6c285212adffe07ae10b9b92"
+    },
+    {
+      "path": "public/images/backgrounds/bg-crane-mono.jpg",
+      "git_blob_sha": "5da7eaa23da9279b9b4216a4914ceaa1c5aed8f8",
+      "deployment_sha1": "3064e2915d6f1073ab8eb80efdbc74e7849c1b3c"
+    },
+    {
+      "path": "public/images/backgrounds/bg-learn-from-pros.png",
+      "git_blob_sha": "db938e795784cf9959b06ac9b110307ad3b6fd46",
+      "deployment_sha1": "bbc839a2160a658bcedb7e4b140c2c31a6896df7"
+    },
+    {
+      "path": "public/images/backgrounds/bg-tpo-mono.jpg",
+      "git_blob_sha": "53558f048258b1d4abb010b86dd7e09b3632a73c",
+      "deployment_sha1": "f77624177ce713f4159c0ffd1fa9a6c2ea5e837f"
+    },
+    {
+      "path": "public/images/backgrounds/bg-welding-mono.jpg",
+      "git_blob_sha": "71c2a1a37033820afa0cf71fe7a51ce1d80b391e",
+      "deployment_sha1": "45bd5ad368ad1b1babafe414a6ab6030c7d41d99"
+    },
+    {
+      "path": "public/images/backgrounds/blueprint-dark.png",
+      "git_blob_sha": "ddf0280a62a05c196d1b2f49d25c55dd40c19beb",
+      "deployment_sha1": "35c43e6aafb349d9f8f2aa700b49e82ef3c65b08"
+    },
+    {
+      "path": "public/images/backgrounds/blueprint-dark.webp",
+      "git_blob_sha": "a274a3adfcbc76c8e593819f38a3237b5839dd61",
+      "deployment_sha1": "bd6505368f7df051e902c627a8d5e5859eb64a05"
+    },
+    {
+      "path": "public/images/backgrounds/blueprint-light-optimized.webp",
+      "git_blob_sha": "c25e26b7445d30a6efb83fea58b28aae06694978",
+      "deployment_sha1": "5246b95324c6a0d91ef22859ea3936ad246e1f93"
+    },
+    {
+      "path": "public/images/backgrounds/blueprint-light.png",
+      "git_blob_sha": "5708a83418fd2b02f56a8818f6fed49291c3244a",
+      "deployment_sha1": "a9a5bfcb9b9ac36639ecd0bd4ea97bd8b0ea293d"
+    },
+    {
+      "path": "public/images/backgrounds/blueprint-light.webp",
+      "git_blob_sha": "15c0f6a241581305ba91cf6c5855522e48882a22",
+      "deployment_sha1": "e76523ea53942bf2e0f4806130bf55ca6aacbf86"
+    },
+    {
+      "path": "public/images/backgrounds/footer-bg.jpg",
+      "git_blob_sha": "be3b726b978212c0afdb699f072448513d824d8d",
+      "deployment_sha1": "536c04f239fa1400db31ab1ea20bd15281cb5a2c"
+    },
+    {
+      "path": "public/images/backgrounds/hero-fallback.jpg",
+      "git_blob_sha": "c804b6ac19464b0dba4bcf672c7c3e2a0c91110e",
+      "deployment_sha1": "82b3191a895cf9c846ae8a659a12159ade53958c"
+    },
+    {
+      "path": "public/images/backgrounds/services-bg.jpg",
+      "git_blob_sha": "c804b6ac19464b0dba4bcf672c7c3e2a0c91110e",
+      "deployment_sha1": "82b3191a895cf9c846ae8a659a12159ade53958c"
+    },
+    {
+      "path": "public/images/badges/gaf-master-silverstar.png",
+      "git_blob_sha": "92cf1734fec3d9ab0566ab0137ba1f9f79df9029",
+      "deployment_sha1": "6a3e239b8de5a20d73f9264202d7c59393026b5a"
+    },
+    {
+      "path": "public/images/blog/good-service-header.webp",
+      "git_blob_sha": "498d371aafd304931bfdbc664c14b9d5984d13d1",
+      "deployment_sha1": "cf9ee0a97cd131ea634804cd36f9ab5762c90704"
+    },
+    {
+      "path": "public/images/blog/hurricane-preparedness.jpg",
+      "git_blob_sha": "1e4e14022c8a0785d8ec04229d001a8e6f72cb63",
+      "deployment_sha1": "29b3bca5c3b23a5865028a47b0e0df78c3bd19b0"
+    },
+    {
+      "path": "public/images/blog/rainy-season.jpg",
+      "git_blob_sha": "32976b77669f6cdb9d80a6d33121a415c2f841ce",
+      "deployment_sha1": "250a13ec4e6b58525b0a25f17461503f2f152f8e"
+    },
+    {
+      "path": "public/images/brand/reticle.png",
+      "git_blob_sha": "b35e5916e3f61916637ab28885e71e5a908fdf88",
+      "deployment_sha1": "655dba8cd92d2e6e318d39efbc02d99ed2802ae0"
+    },
+    {
+      "path": "public/images/community/easter-golisano.jpg",
+      "git_blob_sha": "ce949c45208d466d9bd62e01a3b5cee045b4bfdd",
+      "deployment_sha1": "62e3b5f92b4c6dbcf1cc552bab1aa8b5fdf9a5d4"
+    },
+    {
+      "path": "public/images/community/hurricane-dorian-relief.jpg",
+      "git_blob_sha": "7a07d6f22f09b8269208bc2b2ecb4ffd4588c388",
+      "deployment_sha1": "bfadffceacbb4588d3e87396cba1bb4a6dbbeea9"
+    },
+    {
+      "path": "public/images/community/john-morgan.jpg",
+      "git_blob_sha": "d517d0f5844463feba0c6de064edba19f25610a3",
+      "deployment_sha1": "5f5cf5333fe417a092350bc3c912ff73194ca2f8"
+    },
+    {
+      "path": "public/images/community/year-in-review-2019.jpg",
+      "git_blob_sha": "87100a2ba4510cf69d736877cddf696d4048d437",
+      "deployment_sha1": "0da146a598a9475e5d0e880810766f77ff24217b"
+    },
+    {
+      "path": "public/images/crew/branded/01-inspector-on-roof.png",
+      "git_blob_sha": "fda4ce2691b3962759e70525b898ec0fd24bc36e",
+      "deployment_sha1": "150d2c14ae58dfd88c5becf05c0aee1acfa0dfb7"
+    },
+    {
+      "path": "public/images/crew/branded/02-tpo-welding.png",
+      "git_blob_sha": "640785b9f08dd550c4d08ed9d44a8394a5f2ec18",
+      "deployment_sha1": "89716319638dbfc274964cdc8b264559cc054fd3"
+    },
+    {
+      "path": "public/images/crew/branded/03-customer-handshake.png",
+      "git_blob_sha": "6094c295d96d6cbab74aa90a596976df60dc3577",
+      "deployment_sha1": "ae8e706ddc14fb82b58cf917f572eafa96d23366"
+    },
+    {
+      "path": "public/images/crew/branded/04-team-on-roof.png",
+      "git_blob_sha": "282c9f2ebafe484c65f9aeafb5243dd811cd07b4",
+      "deployment_sha1": "d8c4eb6dd54d120c8db3b945de162b3bddc22e6c"
+    },
+    {
+      "path": "public/images/crew/branded/05-truck-jobsite.png",
+      "git_blob_sha": "975c08e692f0d37880a3ba72c6866d74e7297e41",
+      "deployment_sha1": "6d3cc5194e9621b8d68dcff4c6bc1d2e52aa719a"
+    },
+    {
+      "path": "public/images/crew/branded/06-roof-coating.png",
+      "git_blob_sha": "f52e610ed07e47a9a909511be99468800e6341d5",
+      "deployment_sha1": "660d9b1441f884ed7512ee5cdb38887a3932c4dc"
+    },
+    {
+      "path": "public/images/crew/branded/07-customer-tablet.png",
+      "git_blob_sha": "c30c572d5f84a74a135c23d8b541b375be3eb830",
+      "deployment_sha1": "ed127d0ec0eebb561bbd7367976e70a6ccc78db5"
+    },
+    {
+      "path": "public/images/crew/branded/08-ladder-arrival.png",
+      "git_blob_sha": "56a679c57b0cf518849eea3ab894630f3e35e0e9",
+      "deployment_sha1": "9ec79765dd9bb5f64dace4045b72e6dd83fb3729"
+    },
+    {
+      "path": "public/images/crew/branded/09-storm-damage.png",
+      "git_blob_sha": "66531c115ef9ef1cb5b3254f7bbaf5f91924bb27",
+      "deployment_sha1": "749a0be482b07e963b4725560d20f75f795f1be8"
+    },
+    {
+      "path": "public/images/crew/branded/10-portrait-confident.png",
+      "git_blob_sha": "e9420e45db45b0846ea392f4584feb3de7b75266",
+      "deployment_sha1": "5a7257ef962c1a328a68b717ea632f0c8f17c57d"
+    },
+    {
+      "path": "public/images/crew/crew-roof-inspection-hires.png",
+      "git_blob_sha": "fda4ce2691b3962759e70525b898ec0fd24bc36e",
+      "deployment_sha1": "150d2c14ae58dfd88c5becf05c0aee1acfa0dfb7"
+    },
+    {
+      "path": "public/images/crew/crew-roof-inspection.png",
+      "git_blob_sha": "fda4ce2691b3962759e70525b898ec0fd24bc36e",
+      "deployment_sha1": "150d2c14ae58dfd88c5becf05c0aee1acfa0dfb7"
+    },
+    {
+      "path": "public/images/crew/crew-tpo-welding.png",
+      "git_blob_sha": "640785b9f08dd550c4d08ed9d44a8394a5f2ec18",
+      "deployment_sha1": "89716319638dbfc274964cdc8b264559cc054fd3"
+    },
+    {
+      "path": "public/images/crew/crew-working-tpo.png",
+      "git_blob_sha": "640785b9f08dd550c4d08ed9d44a8394a5f2ec18",
+      "deployment_sha1": "89716319638dbfc274964cdc8b264559cc054fd3"
+    },
+    {
+      "path": "public/images/crew/crew-repairing-roof.png",
+      "git_blob_sha": "6094c295d96d6cbab74aa90a596976df60dc3577",
+      "deployment_sha1": "ae8e706ddc14fb82b58cf917f572eafa96d23366"
+    },
+    {
+      "path": "public/images/crew/crew-team-photo.png",
+      "git_blob_sha": "282c9f2ebafe484c65f9aeafb5243dd811cd07b4",
+      "deployment_sha1": "d8c4eb6dd54d120c8db3b945de162b3bddc22e6c"
+    },
+    {
+      "path": "public/images/crew/crew-overhead-worksite.png",
+      "git_blob_sha": "975c08e692f0d37880a3ba72c6866d74e7297e41",
+      "deployment_sha1": "6d3cc5194e9621b8d68dcff4c6bc1d2e52aa719a"
+    },
+    {
+      "path": "public/images/crew/crew-coating-application.png",
+      "git_blob_sha": "f52e610ed07e47a9a909511be99468800e6341d5",
+      "deployment_sha1": "660d9b1441f884ed7512ee5cdb38887a3932c4dc"
+    },
+    {
+      "path": "public/images/crew/crew-emergency-tarp.png",
+      "git_blob_sha": "66531c115ef9ef1cb5b3254f7bbaf5f91924bb27",
+      "deployment_sha1": "749a0be482b07e963b4725560d20f75f795f1be8"
+    },
+    {
+      "path": "public/images/crew/crew-aerial-worksite.png",
+      "git_blob_sha": "e9420e45db45b0846ea392f4584feb3de7b75266",
+      "deployment_sha1": "5a7257ef962c1a328a68b717ea632f0c8f17c57d"
+    },
+    {
+      "path": "public/images/crew/crew-crane-lift.jpg",
+      "git_blob_sha": "04399b88b628f8c703e18b6ed27acf0195377e93",
+      "deployment_sha1": "3c3678deff2553ea4e4d7b0ac0712443c5753f03"
+    },
+    {
+      "path": "public/images/crew/crew-equipment-spread.jpg",
+      "git_blob_sha": "b0aadce34f74896fc6eeba7c5781abc9841407df",
+      "deployment_sha1": "012dfe55bd63cb8272a7fb2b2a513e30cb9c009b"
+    },
+    {
+      "path": "public/images/crew/crew-roof-inspection.jpg",
+      "git_blob_sha": "a5b0a82296297b8932cd7cee4931d695a6b9ce54",
+      "deployment_sha1": "8876cf940fbd92c95d5982dcee66d590b79529bb"
+    },
+    {
+      "path": "public/images/crew/crew-team-photo.jpg",
+      "git_blob_sha": "7e0df4d9873de3cd6c6630e5bb2692257a8d87ba",
+      "deployment_sha1": "e60cb17c0f4739d484cd7cc1737240e26afc4d43"
+    },
+    {
+      "path": "public/images/crew/crew-welding-closeup.jpg",
+      "git_blob_sha": "47010b349f793e6dafdddffe3581ef7837b9349c",
+      "deployment_sha1": "7a5804f5a9e9367150e620c19adab4a81f209965"
+    },
+    {
+      "path": "public/images/crew/crew-working-tpo.jpg",
+      "git_blob_sha": "c16cf4b8288e5ef127086b7d2fe9a023a0054bca",
+      "deployment_sha1": "ea91f7d01cec3ab76ea5e7b15e572da5c408186c"
+    },
+    {
+      "path": "public/images/crew/crew_repair_action.png",
+      "git_blob_sha": "a44938943738cfcbb83d0719b7afd384ea309b9d",
+      "deployment_sha1": "f82c606354bd150ddee9d465d7bd424f30958adf"
+    },
+    {
+      "path": "public/images/crew/crew_working_on_roof.png",
+      "git_blob_sha": "fdd71264b9f9263a31ee309fa3e1d8a03aa39c2f",
+      "deployment_sha1": "8e8c0399ff221ba03c418f11cc08eee7f9d5ee1e"
+    },
+    {
+      "path": "public/images/crew/generated/01-roof-inspection-clipboard.png",
+      "git_blob_sha": "9d91a5137969d8ec533822e8687c514627a0d244",
+      "deployment_sha1": "aa69ef1710f981addc0b2d6d08bcc545f5b388db"
+    },
+    {
+      "path": "public/images/crew/generated/02-roof-tpo-welding-action.png",
+      "git_blob_sha": "9811198deabfd9d1399f1040372f76e1980e7a67",
+      "deployment_sha1": "b307b8a377e7e57e65d58558d4ac844eae50c2ed"
+    },
+    {
+      "path": "public/images/crew/generated/03-roof-measuring-tape.png",
+      "git_blob_sha": "57e37711e0fcbdb1966ebfd3b1741d73875f2b90",
+      "deployment_sha1": "9b1d0e3ea9a04d2e5af52efb85e7e647f553ec4f"
+    },
+    {
+      "path": "public/images/crew/generated/04-roof-team-working.png",
+      "git_blob_sha": "785a8027ee65a6b97135fb70b31a9594ccc8c630",
+      "deployment_sha1": "0429bf57c4cda91d9021c4acca96b00728ccd65e"
+    },
+    {
+      "path": "public/images/crew/generated/05-roof-edge-detail.png",
+      "git_blob_sha": "c1279d71c4db5f21511f10bccdec2016b9776185",
+      "deployment_sha1": "7dccf0ee3e13c91c90f8e1815dabdba0e620e855"
+    },
+    {
+      "path": "public/images/crew/generated/06-roof-coating-application.png",
+      "git_blob_sha": "b1622993ae8d8e0a8bee6e07454b00a016c612b9",
+      "deployment_sha1": "7d38ce1d9aeacfafb8dd4844e3a6def7bf9b7101"
+    },
+    {
+      "path": "public/images/crew/generated/07-roof-aerial-crew.png",
+      "git_blob_sha": "6437b80a983f92d83b55360fe940724d776b82ed",
+      "deployment_sha1": "6eee5615c404c88c0d745827566be0ab50e6702a"
+    },
+    {
+      "path": "public/images/crew/generated/08-roof-hvac-work.png",
+      "git_blob_sha": "5a9c32304346465beb7706c577f9ce24343fad5a",
+      "deployment_sha1": "4029b1d37cfa800b7c396469edde5640ad87175d"
+    },
+    {
+      "path": "public/images/crew/generated/09-inspection-pointing-damage.png",
+      "git_blob_sha": "2d573f7a9608d0306a3e5f6cf33f86250e6fbe32",
+      "deployment_sha1": "4ac5671ce447b2bb60835c56b96417f2edcb08fb"
+    },
+    {
+      "path": "public/images/crew/generated/10-inspection-thermal-camera.png",
+      "git_blob_sha": "05a53b6a46b59158f8b49d1df42b2042addbe27f",
+      "deployment_sha1": "042103f6bf26d637eb91ca31546d91601138f2a7"
+    },
+    {
+      "path": "public/images/crew/generated/11-inspection-taking-photo.png",
+      "git_blob_sha": "97b223f9d9a4b78c8c3caceacc9cab025e9b6a23",
+      "deployment_sha1": "0675523697b8cdd62d9e5c0409c039293de5b770"
+    },
+    {
+      "path": "public/images/crew/generated/12-customer-meeting-handshake.png",
+      "git_blob_sha": "35b66bdfa323c8807bef416b4cc46a2f9cc1c320",
+      "deployment_sha1": "22097a37a5eb01cf278f09c44c55323f440237c7"
+    },
+    {
+      "path": "public/images/crew/generated/13-customer-showing-tablet.png",
+      "git_blob_sha": "e686ba1aedc76b4360fbc85799365d91bd68fb27",
+      "deployment_sha1": "03dc93e0e62aa85e2ab360b8bc40c43b052f2663"
+    },
+    {
+      "path": "public/images/crew/generated/14-customer-walkthrough.png",
+      "git_blob_sha": "2ef3922052ebbdfab331b156df473f72807c74e1",
+      "deployment_sha1": "d60cb22bdaae7fb1ffd9b9400ea7ddb9380158ec"
+    },
+    {
+      "path": "public/images/crew/generated/15-truck-arrival.png",
+      "git_blob_sha": "346b36d0a771b23c949acd6bd48920d16d362ff4",
+      "deployment_sha1": "9cc73a1fd42cf384ea3baee90951659fa2f2f42a"
+    },
+    {
+      "path": "public/images/crew/generated/16-truck-loading-materials.png",
+      "git_blob_sha": "7825bf42ac7f62cb4d2945b6cea2abdd27b9c3a2",
+      "deployment_sha1": "a8ab12d6a27aa04455cccb8bb1b54011c71980d8"
+    },
+    {
+      "path": "public/images/crew/generated/17-ladder-climbing.png",
+      "git_blob_sha": "b0c39f0246a8be4015c87561b8dcd2e7f0be7835",
+      "deployment_sha1": "2afe7d4f302b3d2d7e64be37b67f03a4864a1126"
+    },
+    {
+      "path": "public/images/crew/generated/18-emergency-tarp-install.png",
+      "git_blob_sha": "5d95752e30e3cbf34ae38617147e8113112991b4",
+      "deployment_sha1": "076975143d0bda470c1d8a194cddfcdb1c0bc7e0"
+    },
+    {
+      "path": "public/images/crew/generated/19-storm-damage-assessment.png",
+      "git_blob_sha": "0601e99b8e061db646a4cf7beca55e592c06fb8e",
+      "deployment_sha1": "bc8474af27a594d9fccbea5dedd602766f3c98af"
+    },
+    {
+      "path": "public/images/crew/generated/20-worker-portrait-confident.png",
+      "git_blob_sha": "df16d1be4a6da5e587ac9b4f95d0d9db2655072f",
+      "deployment_sha1": "0e79b0c3fed464162c81ac296bc51808bd7f7f70"
+    },
+    {
+      "path": "public/images/icons/new-construction.png",
+      "git_blob_sha": "d65a85a4b0879b3a8520cda0012093ecd3d6c56b",
+      "deployment_sha1": "b4fd2e0bc2e445a051c05f23389c6f8a3196b709"
+    },
+    {
+      "path": "public/images/icons/proactive-maintenance.png",
+      "git_blob_sha": "09d97cc860c6215178f3a9151e22112c2c0892fc",
+      "deployment_sha1": "1e10919072496f42cfcb0d870b7c9bb8d2cc676c"
+    },
+    {
+      "path": "public/images/icons/replacement-transition.png",
+      "git_blob_sha": "f960c001a8d9c10ada0fc5c29f4899a8254677fe",
+      "deployment_sha1": "18cade8d28d4401897d506f88fe323c50f7300a3"
+    },
+    {
+      "path": "public/images/icons/roof-repair.png",
+      "git_blob_sha": "84610626be46bf69a8879eadebd80c550d0f0f1c",
+      "deployment_sha1": "a6afab0e1aa74bb275b6f13661569aefe539764d"
+    },
+    {
+      "path": "public/images/logos/favicon-114.jpg",
+      "git_blob_sha": "b73a5fdd9bee315d75b0ccdb0e857e482562e69e",
+      "deployment_sha1": "bccbe538e1a709299f65280e63c652b6028c2a03"
+    },
+    {
+      "path": "public/images/logos/favicon-16.jpg",
+      "git_blob_sha": "9db82c89277715c793b59768f8eae48db4920818",
+      "deployment_sha1": "30fca051a237a337864ee10327f3761befee3c26"
+    },
+    {
+      "path": "public/images/logos/reticle-white-1024.png",
+      "git_blob_sha": "cc70ed7f39f11556357bad6bcd84b5f8186605d7",
+      "deployment_sha1": "69277e3c9d8ab170ba838a51dbb2906a768c0364"
+    },
+    {
+      "path": "public/images/logos/reticle-white-128.png",
+      "git_blob_sha": "d40fc9d0471ba9619a72a95667bbd25b2b6cd04e",
+      "deployment_sha1": "ddad3b4fda970f336bae0445975533d61bc56358"
+    },
+    {
+      "path": "public/images/logos/reticle-white-small.svg",
+      "git_blob_sha": "f6a1715dba780601c49764333d65715f590dbd54",
+      "deployment_sha1": "635abb0b75d000170073620c8e2e34d812209b46"
+    },
+    {
+      "path": "public/images/logos/reticle-white.svg",
+      "git_blob_sha": "f22c39edbccbdc33fe8ab859286bbbe082e83ac5",
+      "deployment_sha1": "216e6e72f66d68e5d781f13456d23de80d43504e"
+    },
+    {
+      "path": "public/images/logos/target-roofing-logo-2x.png",
+      "git_blob_sha": "45e592a0c27df286dac2a00aeeac8e03a9a4a8a9",
+      "deployment_sha1": "73e00258925f146a956bc7d68938625940731c69"
+    },
+    {
+      "path": "public/images/logos/target-roofing-logo.png",
+      "git_blob_sha": "0de6cc96dca7ec5c99bf6c461aa05b0a324894f8",
+      "deployment_sha1": "7cd2e40f96de4998eac46258d399478e29a3dd98"
+    },
+    {
+      "path": "public/images/partners/carlisle.png",
+      "git_blob_sha": "9a27f3d2b701ebd8291955f4bdae4a3647595255",
+      "deployment_sha1": "d679e03872238ced0df221bb75e13863b9751b0b"
+    },
+    {
+      "path": "public/images/partners/englert.jpg",
+      "git_blob_sha": "d5a7f7dd3f1b4ffe76cdea1b88b2de211ede6994",
+      "deployment_sha1": "cafb54b2112d9061e5e19d512c98a478faa7dbaa"
+    },
+    {
+      "path": "public/images/partners/gaf.png",
+      "git_blob_sha": "b6bc3a276587e73a35873a03d46a206a100c9ef5",
+      "deployment_sha1": "1cacf18c6a3e7062e59b78f7c92322e75da9849d"
+    },
+    {
+      "path": "public/images/partners/genflex.jpg",
+      "git_blob_sha": "babd79915713594264641fabedec79a137010aeb",
+      "deployment_sha1": "3a06f418e62e1fde2514357725f11b1f0598c824"
+    },
+    {
+      "path": "public/images/partners/polyglass.png",
+      "git_blob_sha": "82b6f2eaed145ca13d035b9fe002f9d2c2cdc5bb",
+      "deployment_sha1": "580f786107c334094cd286c2a422e0f8c3128eb4"
+    },
+    {
+      "path": "public/images/partners/soprema.jpg",
+      "git_blob_sha": "9ab6ce1dce075460edddab6b3bc2691393140cd8",
+      "deployment_sha1": "1a21f9dd590b0e3db10fb416d0fb03ee9537fa9a"
+    },
+    {
+      "path": "public/images/partners/tropical-roofing.jpg",
+      "git_blob_sha": "18102f2cc3cc220c93f989050ed5843aa392b15c",
+      "deployment_sha1": "557b7649b840cc8452140eb6464aa8bad58768f2"
+    },
+    {
+      "path": "public/images/portfolio/1403-cape-coral-pkwy-e.jpg",
+      "git_blob_sha": "c76325b63b25220f994ca15a89892ee95390525b",
+      "deployment_sha1": "d1df73f93084d35b62e161a89ecf72ff78e2d50b"
+    },
+    {
+      "path": "public/images/portfolio/560-9th-street.jpg",
+      "git_blob_sha": "c76325b63b25220f994ca15a89892ee95390525b",
+      "deployment_sha1": "d1df73f93084d35b62e161a89ecf72ff78e2d50b"
+    },
+    {
+      "path": "public/images/portfolio/category-templates/office.jpg",
+      "git_blob_sha": "c76325b63b25220f994ca15a89892ee95390525b",
+      "deployment_sha1": "d1df73f93084d35b62e161a89ecf72ff78e2d50b"
+    },
+    {
+      "path": "public/images/portfolio/category-templates/warehouses.jpg",
+      "git_blob_sha": "5baec2008a4554032a89037bdd1c9244aa235852",
+      "deployment_sha1": "a08874a00c4a038c630f093758094c330bf7c4eb"
+    },
+    {
+      "path": "public/images/portfolio/category-templates/highrises.jpg",
+      "git_blob_sha": "08e497e9cd7366dedd61cd94b0f5e2f11877b422",
+      "deployment_sha1": "1af462bb2a4f01f29edc3be8a54e6fd4c677facd"
+    },
+    {
+      "path": "public/images/portfolio/category-templates/retail.jpg",
+      "git_blob_sha": "ace3d1d65345cedea93ae4ddfec25781df18e98a",
+      "deployment_sha1": "d21097d55f0795092494bf61d4fb21af72cee673"
+    },
+    {
+      "path": "public/images/portfolio/category-templates/countryclubs.jpg",
+      "git_blob_sha": "542c3b5f8569382a77f9f0eb06bc7c2698b7f0ef",
+      "deployment_sha1": "398241679114f9338b6aa482ac5174a305eb2d26"
+    },
+    {
+      "path": "public/images/portfolio/category-templates/condos.jpg",
+      "git_blob_sha": "75212a9e82349f1cb6d684d65227d4671853bf2f",
+      "deployment_sha1": "ef159c6a7753083da929aca8d9c4be1ca6b3554e"
+    },
+    {
+      "path": "public/images/portfolio/category-templates/theaters.jpg",
+      "git_blob_sha": "b5a51c095080cdf81960c54e444d4d286365498c",
+      "deployment_sha1": "07c272076fb60b3dc5e7915203a92817a95d63af"
+    },
+    {
+      "path": "public/images/portfolio/category-templates/government.jpg",
+      "git_blob_sha": "73133a32a8b99aa387985f82f5b7efb5eb4d9ee9",
+      "deployment_sha1": "202a0172ca4541cdfc8af3175430d072cc75db7c"
+    },
+    {
+      "path": "public/images/portfolio/category-templates/churches.jpg",
+      "git_blob_sha": "e680b92750b812256e055ba59c7f86dd3ab7c789",
+      "deployment_sha1": "7de82a7773884f1e1d3d41bff00632c418fc656f"
+    },
+    {
+      "path": "public/images/portfolio/category-templates/churches.png",
+      "git_blob_sha": "83584f4cc668a78e198505df2948b6d562cc1fae",
+      "deployment_sha1": "66a439a9ab515cb050e7ea1aa0d66252f34c6390"
+    },
+    {
+      "path": "public/images/portfolio/category-templates/condos.png",
+      "git_blob_sha": "0910869b1d7444566f7bbd033e425ebc69e50475",
+      "deployment_sha1": "73282d2e37ac312c94d9dd5acb99f7f848560412"
+    },
+    {
+      "path": "public/images/portfolio/category-templates/condos2.jpg",
+      "git_blob_sha": "8001511f8fb374cf0ee558ac6dd5cebd9cb9730c",
+      "deployment_sha1": "b57a00ee192a4372563957b7b364a1b7f5f98633"
+    },
+    {
+      "path": "public/images/portfolio/category-templates/condos2.png",
+      "git_blob_sha": "705bbbc7459f936ff61b60ecd40bc0b280f96b95",
+      "deployment_sha1": "596184ab26f91628226b02a18fd61fd03b755302"
+    },
+    {
+      "path": "public/images/portfolio/category-templates/condos3.jpg",
+      "git_blob_sha": "3c848f1fd761fb860d3b0824a0454460e7474847",
+      "deployment_sha1": "1b12d48efe36e30f83d9ee276a78840d76b67fc7"
+    },
+    {
+      "path": "public/images/portfolio/category-templates/condos3.png",
+      "git_blob_sha": "f8a44de3aae6793b071b7f26b4243839e3391dcf",
+      "deployment_sha1": "b36eb0d742379b15b17787b21d499457009258c9"
+    },
+    {
+      "path": "public/images/portfolio/category-templates/countryclubs.png",
+      "git_blob_sha": "7f39edf113f0761a1e806fd579a3852795c3cc24",
+      "deployment_sha1": "5fe454f10374335d1bbe5b9b9cec48d0601506c8"
+    },
+    {
+      "path": "public/images/portfolio/category-templates/government.png",
+      "git_blob_sha": "fa98769c969c37de011650115bc417512e535c80",
+      "deployment_sha1": "167be8507d9cc9bf802a53555b92121feddd2edc"
+    },
+    {
+      "path": "public/images/portfolio/category-templates/govt2.jpg",
+      "git_blob_sha": "892373ae3cf2bfd88c6c34d328658cb4b2595807",
+      "deployment_sha1": "63098c3e81215399342d3fcfcff2b77d636c2545"
+    },
+    {
+      "path": "public/images/portfolio/category-templates/govt2.png",
+      "git_blob_sha": "dc6b5ffa9c506567dab732a92234434232d829f3",
+      "deployment_sha1": "eb2ce509320900f04c7aeb921b66db50a8de59b0"
+    },
+    {
+      "path": "public/images/portfolio/category-templates/healthcare.jpg",
+      "git_blob_sha": "3427eb9b2924e440b38e11979935bb9404d10d30",
+      "deployment_sha1": "cb23d30a1fabd0d7d9d892b09323e56fcaf456e5"
+    },
+    {
+      "path": "public/images/portfolio/category-templates/healthcare.png",
+      "git_blob_sha": "ce5c0303b523804b966d6b06fb01f2416536a552",
+      "deployment_sha1": "c9d97d42cceb89c47d4ff28dd78a927cf740897e"
+    },
+    {
+      "path": "public/images/portfolio/category-templates/highrises.png",
+      "git_blob_sha": "df17cfe7f7041a75194b1fe3d95537cb5e1155f8",
+      "deployment_sha1": "8a24dca3989523ed4a9e6ded5b6665850d09d7bc"
+    },
+    {
+      "path": "public/images/portfolio/category-templates/office.png",
+      "git_blob_sha": "0fcd031206ec6e70788ef14bfda2f2c06595159e",
+      "deployment_sha1": "e3a97dabba9496d6bb78a5436f4c3ebf160b3fdc"
+    },
+    {
+      "path": "public/images/portfolio/category-templates/retail.png",
+      "git_blob_sha": "666f2529511c37b2e29db5a10abec6435ca2c6ba",
+      "deployment_sha1": "902661dba7b3ae40d9b441a14c24808759c6ea35"
+    },
+    {
+      "path": "public/images/portfolio/category-templates/retail2.jpg",
+      "git_blob_sha": "c208f91c700f559aadf51e853154edba0f808bbb",
+      "deployment_sha1": "ade21a845d6d692019cd910cd0ca4feeedb0cb77"
+    },
+    {
+      "path": "public/images/portfolio/category-templates/retail2.png",
+      "git_blob_sha": "994968a95c81f11caef005091b373c680ecff855",
+      "deployment_sha1": "f0482a6fe82f889baa88fc78c3fe7a7d4c75ac3b"
+    },
+    {
+      "path": "public/images/portfolio/category-templates/schools.jpg",
+      "git_blob_sha": "fc520d5edfa0964224494babc0cc106855e9e846",
+      "deployment_sha1": "f22e4d052490ca809db4cdade78d796ebfe4470e"
+    },
+    {
+      "path": "public/images/portfolio/category-templates/schools.png",
+      "git_blob_sha": "ae66211a4697653a7dee58e0d2d8678016edcd12",
+      "deployment_sha1": "74dff1599e1a53d8e3ec467ba87c5d653d31257b"
+    },
+    {
+      "path": "public/images/portfolio/category-templates/theaters.png",
+      "git_blob_sha": "68d30036d58343ef6df5dc1be6d42726fedc5e32",
+      "deployment_sha1": "d45bf6d3d99d0ccf275360738bb0272dda0f9256"
+    },
+    {
+      "path": "public/images/portfolio/category-templates/warehouses.png",
+      "git_blob_sha": "6f2b92cc468c556928afc8ba5c7018cbc73a46e9",
+      "deployment_sha1": "101b624b0b867df381b4d28038ca95eedc539be4"
+    },
+    {
+      "path": "public/images/portfolio/dwyer.jpg",
+      "git_blob_sha": "c76325b63b25220f994ca15a89892ee95390525b",
+      "deployment_sha1": "d1df73f93084d35b62e161a89ecf72ff78e2d50b"
+    },
+    {
+      "path": "public/images/portfolio/eastpointe-professional-center.jpg",
+      "git_blob_sha": "c76325b63b25220f994ca15a89892ee95390525b",
+      "deployment_sha1": "d1df73f93084d35b62e161a89ecf72ff78e2d50b"
+    },
+    {
+      "path": "public/images/portfolio/presidential-court.jpg",
+      "git_blob_sha": "c76325b63b25220f994ca15a89892ee95390525b",
+      "deployment_sha1": "d1df73f93084d35b62e161a89ecf72ff78e2d50b"
+    },
+    {
+      "path": "public/images/portfolio/the-design-center.jpg",
+      "git_blob_sha": "c76325b63b25220f994ca15a89892ee95390525b",
+      "deployment_sha1": "d1df73f93084d35b62e161a89ecf72ff78e2d50b"
+    },
+    {
+      "path": "public/images/portfolio/wolf-and-pravato.jpg",
+      "git_blob_sha": "c76325b63b25220f994ca15a89892ee95390525b",
+      "deployment_sha1": "d1df73f93084d35b62e161a89ecf72ff78e2d50b"
+    },
+    {
+      "path": "public/images/portfolio/5552-tice-street.jpg",
+      "git_blob_sha": "5baec2008a4554032a89037bdd1c9244aa235852",
+      "deployment_sha1": "a08874a00c4a038c630f093758094c330bf7c4eb"
+    },
+    {
+      "path": "public/images/portfolio/admiralty-house.jpg",
+      "git_blob_sha": "08e497e9cd7366dedd61cd94b0f5e2f11877b422",
+      "deployment_sha1": "1af462bb2a4f01f29edc3be8a54e6fd4c677facd"
+    },
+    {
+      "path": "public/images/portfolio/aqua-ii-at-pelican-isle.jpg",
+      "git_blob_sha": "08e497e9cd7366dedd61cd94b0f5e2f11877b422",
+      "deployment_sha1": "1af462bb2a4f01f29edc3be8a54e6fd4c677facd"
+    },
+    {
+      "path": "public/images/portfolio/echelon-on-palm.jpg",
+      "git_blob_sha": "08e497e9cd7366dedd61cd94b0f5e2f11877b422",
+      "deployment_sha1": "1af462bb2a4f01f29edc3be8a54e6fd4c677facd"
+    },
+    {
+      "path": "public/images/portfolio/mirage-on-the-gulf.jpg",
+      "git_blob_sha": "08e497e9cd7366dedd61cd94b0f5e2f11877b422",
+      "deployment_sha1": "1af462bb2a4f01f29edc3be8a54e6fd4c677facd"
+    },
+    {
+      "path": "public/images/portfolio/remington-at-bay-colony.jpg",
+      "git_blob_sha": "08e497e9cd7366dedd61cd94b0f5e2f11877b422",
+      "deployment_sha1": "1af462bb2a4f01f29edc3be8a54e6fd4c677facd"
+    },
+    {
+      "path": "public/images/portfolio/seaglass-at-bonita-bay.jpg",
+      "git_blob_sha": "08e497e9cd7366dedd61cd94b0f5e2f11877b422",
+      "deployment_sha1": "1af462bb2a4f01f29edc3be8a54e6fd4c677facd"
+    },
+    {
+      "path": "public/images/portfolio/around-the-clock-fitness-fort-myers-fl.jpg",
+      "git_blob_sha": "ace3d1d65345cedea93ae4ddfec25781df18e98a",
+      "deployment_sha1": "d21097d55f0795092494bf61d4fb21af72cee673"
+    },
+    {
+      "path": "public/images/portfolio/duffy-s-sports-bar.jpg",
+      "git_blob_sha": "ace3d1d65345cedea93ae4ddfec25781df18e98a",
+      "deployment_sha1": "d21097d55f0795092494bf61d4fb21af72cee673"
+    },
+    {
+      "path": "public/images/portfolio/fleamasters.jpg",
+      "git_blob_sha": "ace3d1d65345cedea93ae4ddfec25781df18e98a",
+      "deployment_sha1": "d21097d55f0795092494bf61d4fb21af72cee673"
+    },
+    {
+      "path": "public/images/portfolio/hooters-fort-myers.jpg",
+      "git_blob_sha": "ace3d1d65345cedea93ae4ddfec25781df18e98a",
+      "deployment_sha1": "d21097d55f0795092494bf61d4fb21af72cee673"
+    },
+    {
+      "path": "public/images/portfolio/marco-island-plaza.jpg",
+      "git_blob_sha": "ace3d1d65345cedea93ae4ddfec25781df18e98a",
+      "deployment_sha1": "d21097d55f0795092494bf61d4fb21af72cee673"
+    },
+    {
+      "path": "public/images/portfolio/plymouth-plaza.jpg",
+      "git_blob_sha": "ace3d1d65345cedea93ae4ddfec25781df18e98a",
+      "deployment_sha1": "d21097d55f0795092494bf61d4fb21af72cee673"
+    },
+    {
+      "path": "public/images/portfolio/barron-collier-high-school.jpg",
+      "git_blob_sha": "21d09f8fd3f5ae9fc028e5df1b747748688bdce0",
+      "deployment_sha1": "2ab08a116b5de1d1da4d4a200a5a59d445f52e45"
+    },
+    {
+      "path": "public/images/portfolio/bay-colony-beach-club.jpg",
+      "git_blob_sha": "542c3b5f8569382a77f9f0eb06bc7c2698b7f0ef",
+      "deployment_sha1": "398241679114f9338b6aa482ac5174a305eb2d26"
+    },
+    {
+      "path": "public/images/portfolio/bay-colony-golf-club-house.jpg",
+      "git_blob_sha": "542c3b5f8569382a77f9f0eb06bc7c2698b7f0ef",
+      "deployment_sha1": "398241679114f9338b6aa482ac5174a305eb2d26"
+    },
+    {
+      "path": "public/images/portfolio/gulf-harbor-clubhouse.jpg",
+      "git_blob_sha": "542c3b5f8569382a77f9f0eb06bc7c2698b7f0ef",
+      "deployment_sha1": "398241679114f9338b6aa482ac5174a305eb2d26"
+    },
+    {
+      "path": "public/images/portfolio/rod-gun-club.jpg",
+      "git_blob_sha": "542c3b5f8569382a77f9f0eb06bc7c2698b7f0ef",
+      "deployment_sha1": "398241679114f9338b6aa482ac5174a305eb2d26"
+    },
+    {
+      "path": "public/images/portfolio/the-club-at-mediterra-2.jpg",
+      "git_blob_sha": "542c3b5f8569382a77f9f0eb06bc7c2698b7f0ef",
+      "deployment_sha1": "398241679114f9338b6aa482ac5174a305eb2d26"
+    },
+    {
+      "path": "public/images/portfolio/the-club-at-mediterra-sports-club.jpg",
+      "git_blob_sha": "542c3b5f8569382a77f9f0eb06bc7c2698b7f0ef",
+      "deployment_sha1": "398241679114f9338b6aa482ac5174a305eb2d26"
+    },
+    {
+      "path": "public/images/portfolio/baypointe-yacht-and-racquet-club-condos.jpg",
+      "git_blob_sha": "75212a9e82349f1cb6d684d65227d4671853bf2f",
+      "deployment_sha1": "ef159c6a7753083da929aca8d9c4be1ca6b3554e"
+    },
+    {
+      "path": "public/images/portfolio/heritage-cove.jpg",
+      "git_blob_sha": "75212a9e82349f1cb6d684d65227d4671853bf2f",
+      "deployment_sha1": "ef159c6a7753083da929aca8d9c4be1ca6b3554e"
+    },
+    {
+      "path": "public/images/portfolio/mariner-east.jpg",
+      "git_blob_sha": "75212a9e82349f1cb6d684d65227d4671853bf2f",
+      "deployment_sha1": "ef159c6a7753083da929aca8d9c4be1ca6b3554e"
+    },
+    {
+      "path": "public/images/portfolio/palm-villas.jpg",
+      "git_blob_sha": "75212a9e82349f1cb6d684d65227d4671853bf2f",
+      "deployment_sha1": "ef159c6a7753083da929aca8d9c4be1ca6b3554e"
+    },
+    {
+      "path": "public/images/portfolio/royal-woods.jpg",
+      "git_blob_sha": "75212a9e82349f1cb6d684d65227d4671853bf2f",
+      "deployment_sha1": "ef159c6a7753083da929aca8d9c4be1ca6b3554e"
+    },
+    {
+      "path": "public/images/portfolio/the-fountains.jpg",
+      "git_blob_sha": "75212a9e82349f1cb6d684d65227d4671853bf2f",
+      "deployment_sha1": "ef159c6a7753083da929aca8d9c4be1ca6b3554e"
+    },
+    {
+      "path": "public/images/portfolio/victoria-manor-condominium.jpg",
+      "git_blob_sha": "75212a9e82349f1cb6d684d65227d4671853bf2f",
+      "deployment_sha1": "ef159c6a7753083da929aca8d9c4be1ca6b3554e"
+    },
+    {
+      "path": "public/images/portfolio/beach-road-plaza.jpg",
+      "git_blob_sha": "3e02b81ebea4fbeb381deb5d5139c2212b2e2529",
+      "deployment_sha1": "f537d696a1bf448ec311789624e07e8e6c1d7eb6"
+    },
+    {
+      "path": "public/images/portfolio/big-arts-performing-arts-theater.jpg",
+      "git_blob_sha": "d08b6ec55d2d15c084c581a1bc507540953d8e7e",
+      "deployment_sha1": "5ad73d2f80fdca6f167a109e62b23b69ad4bfe24"
+    },
+    {
+      "path": "public/images/portfolio/boca-grande-health-clinic.jpg",
+      "git_blob_sha": "1ac66af8ea284dc358df66650c26e119c0f165e6",
+      "deployment_sha1": "3524f53c8b5463d7cef8f7e3e5ec69d3a18136cc"
+    },
+    {
+      "path": "public/images/portfolio/bonita-springs-recreation-center.jpg",
+      "git_blob_sha": "c433ee468a610dbcaecc54143b8be512eab324a4",
+      "deployment_sha1": "d6aefc712471fe3c369bef34854f4c0ec68a4e1e"
+    },
+    {
+      "path": "public/images/portfolio/brendan.jpg",
+      "git_blob_sha": "4917b77d93e6c9d4d33b5049b215dd6ed897b5ff",
+      "deployment_sha1": "e945dbbfa28472406e623249d4116388408cf88b"
+    },
+    {
+      "path": "public/images/portfolio/broadhurst-loop.jpg",
+      "git_blob_sha": "ca55d08a1c708a515196ed111ac9f5d5f544e897",
+      "deployment_sha1": "f9e9a2f17a57b5c85bb7dee9cdca575d2be88f7d"
+    },
+    {
+      "path": "public/images/portfolio/cape-cabaret.jpg",
+      "git_blob_sha": "b5a51c095080cdf81960c54e444d4d286365498c",
+      "deployment_sha1": "07c272076fb60b3dc5e7915203a92817a95d63af"
+    },
+    {
+      "path": "public/images/portfolio/martin-theater.jpg",
+      "git_blob_sha": "b5a51c095080cdf81960c54e444d4d286365498c",
+      "deployment_sha1": "07c272076fb60b3dc5e7915203a92817a95d63af"
+    },
+    {
+      "path": "public/images/portfolio/cape-coral-fire-station-7.jpg",
+      "git_blob_sha": "73133a32a8b99aa387985f82f5b7efb5eb4d9ee9",
+      "deployment_sha1": "202a0172ca4541cdfc8af3175430d072cc75db7c"
+    },
+    {
+      "path": "public/images/portfolio/collier-county-museum.jpg",
+      "git_blob_sha": "73133a32a8b99aa387985f82f5b7efb5eb4d9ee9",
+      "deployment_sha1": "202a0172ca4541cdfc8af3175430d072cc75db7c"
+    },
+    {
+      "path": "public/images/portfolio/fort-myers-social-security-office.jpg",
+      "git_blob_sha": "73133a32a8b99aa387985f82f5b7efb5eb4d9ee9",
+      "deployment_sha1": "202a0172ca4541cdfc8af3175430d072cc75db7c"
+    },
+    {
+      "path": "public/images/portfolio/salvation-army-2.jpg",
+      "git_blob_sha": "73133a32a8b99aa387985f82f5b7efb5eb4d9ee9",
+      "deployment_sha1": "202a0172ca4541cdfc8af3175430d072cc75db7c"
+    },
+    {
+      "path": "public/images/portfolio/waste-water-treatment-plant.jpg",
+      "git_blob_sha": "73133a32a8b99aa387985f82f5b7efb5eb4d9ee9",
+      "deployment_sha1": "202a0172ca4541cdfc8af3175430d072cc75db7c"
+    },
+    {
+      "path": "public/images/portfolio/casey.jpg",
+      "git_blob_sha": "eaa51442bf139bdd579f0e187e4f38a27de09a47",
+      "deployment_sha1": "de6a517c30df211a301370fd616696697d534e75"
+    },
+    {
+      "path": "public/images/portfolio/estero-united-methodist-church.jpg",
+      "git_blob_sha": "e680b92750b812256e055ba59c7f86dd3ab7c789",
+      "deployment_sha1": "7de82a7773884f1e1d3d41bff00632c418fc656f"
+    },
+    {
+      "path": "public/images/portfolio/saint-ann-jubilee-center.jpg",
+      "git_blob_sha": "e680b92750b812256e055ba59c7f86dd3ab7c789",
+      "deployment_sha1": "7de82a7773884f1e1d3d41bff00632c418fc656f"
+    },
+    {
+      "path": "public/images/portfolio/st-john-xxiii-catholic-church.jpg",
+      "git_blob_sha": "e680b92750b812256e055ba59c7f86dd3ab7c789",
+      "deployment_sha1": "7de82a7773884f1e1d3d41bff00632c418fc656f"
+    },
+    {
+      "path": "public/images/portfolio/cypress-lake-manor.jpg",
+      "git_blob_sha": "8001511f8fb374cf0ee558ac6dd5cebd9cb9730c",
+      "deployment_sha1": "b57a00ee192a4372563957b7b364a1b7f5f98633"
+    },
+    {
+      "path": "public/images/portfolio/indian-creek-golf-villas.jpg",
+      "git_blob_sha": "8001511f8fb374cf0ee558ac6dd5cebd9cb9730c",
+      "deployment_sha1": "b57a00ee192a4372563957b7b364a1b7f5f98633"
+    },
+    {
+      "path": "public/images/portfolio/mariner-pointe.jpg",
+      "git_blob_sha": "8001511f8fb374cf0ee558ac6dd5cebd9cb9730c",
+      "deployment_sha1": "b57a00ee192a4372563957b7b364a1b7f5f98633"
+    },
+    {
+      "path": "public/images/portfolio/pueblo-bonito.jpg",
+      "git_blob_sha": "8001511f8fb374cf0ee558ac6dd5cebd9cb9730c",
+      "deployment_sha1": "b57a00ee192a4372563957b7b364a1b7f5f98633"
+    },
+    {
+      "path": "public/images/portfolio/the-commodore.jpg",
+      "git_blob_sha": "8001511f8fb374cf0ee558ac6dd5cebd9cb9730c",
+      "deployment_sha1": "b57a00ee192a4372563957b7b364a1b7f5f98633"
+    },
+    {
+      "path": "public/images/portfolio/trailwinds-greenbriar-condos.jpg",
+      "git_blob_sha": "8001511f8fb374cf0ee558ac6dd5cebd9cb9730c",
+      "deployment_sha1": "b57a00ee192a4372563957b7b364a1b7f5f98633"
+    },
+    {
+      "path": "public/images/portfolio/harborside-terrace.jpg",
+      "git_blob_sha": "3c848f1fd761fb860d3b0824a0454460e7474847",
+      "deployment_sha1": "1b12d48efe36e30f83d9ee276a78840d76b67fc7"
+    },
+    {
+      "path": "public/images/portfolio/island-park-woods.jpg",
+      "git_blob_sha": "3c848f1fd761fb860d3b0824a0454460e7474847",
+      "deployment_sha1": "1b12d48efe36e30f83d9ee276a78840d76b67fc7"
+    },
+    {
+      "path": "public/images/portfolio/naples-square-iii.jpg",
+      "git_blob_sha": "3c848f1fd761fb860d3b0824a0454460e7474847",
+      "deployment_sha1": "1b12d48efe36e30f83d9ee276a78840d76b67fc7"
+    },
+    {
+      "path": "public/images/portfolio/riviera-golf-estates.jpg",
+      "git_blob_sha": "3c848f1fd761fb860d3b0824a0454460e7474847",
+      "deployment_sha1": "1b12d48efe36e30f83d9ee276a78840d76b67fc7"
+    },
+    {
+      "path": "public/images/portfolio/the-dunes-amenity-center.jpg",
+      "git_blob_sha": "3c848f1fd761fb860d3b0824a0454460e7474847",
+      "deployment_sha1": "1b12d48efe36e30f83d9ee276a78840d76b67fc7"
+    },
+    {
+      "path": "public/images/portfolio/triana-terrace.jpg",
+      "git_blob_sha": "3c848f1fd761fb860d3b0824a0454460e7474847",
+      "deployment_sha1": "1b12d48efe36e30f83d9ee276a78840d76b67fc7"
+    },
+    {
+      "path": "public/images/portfolio/collier-county-building-g.jpg",
+      "git_blob_sha": "892373ae3cf2bfd88c6c34d328658cb4b2595807",
+      "deployment_sha1": "63098c3e81215399342d3fcfcff2b77d636c2545"
+    },
+    {
+      "path": "public/images/portfolio/fort-myers-fire-station.jpg",
+      "git_blob_sha": "892373ae3cf2bfd88c6c34d328658cb4b2595807",
+      "deployment_sha1": "63098c3e81215399342d3fcfcff2b77d636c2545"
+    },
+    {
+      "path": "public/images/portfolio/ft-myers-beach-town-hall.jpg",
+      "git_blob_sha": "892373ae3cf2bfd88c6c34d328658cb4b2595807",
+      "deployment_sha1": "63098c3e81215399342d3fcfcff2b77d636c2545"
+    },
+    {
+      "path": "public/images/portfolio/salvation-army.jpg",
+      "git_blob_sha": "892373ae3cf2bfd88c6c34d328658cb4b2595807",
+      "deployment_sha1": "63098c3e81215399342d3fcfcff2b77d636c2545"
+    },
+    {
+      "path": "public/images/portfolio/williams-academy-black-history-museum.jpg",
+      "git_blob_sha": "892373ae3cf2bfd88c6c34d328658cb4b2595807",
+      "deployment_sha1": "63098c3e81215399342d3fcfcff2b77d636c2545"
+    },
+    {
+      "path": "public/images/portfolio/harris-dermatology.jpg",
+      "git_blob_sha": "3427eb9b2924e440b38e11979935bb9404d10d30",
+      "deployment_sha1": "cb23d30a1fabd0d7d9d892b09323e56fcaf456e5"
+    },
+    {
+      "path": "public/images/portfolio/lee-health-cardiology.jpg",
+      "git_blob_sha": "3427eb9b2924e440b38e11979935bb9404d10d30",
+      "deployment_sha1": "cb23d30a1fabd0d7d9d892b09323e56fcaf456e5"
+    },
+    {
+      "path": "public/images/portfolio/metropolis-medical.jpg",
+      "git_blob_sha": "3427eb9b2924e440b38e11979935bb9404d10d30",
+      "deployment_sha1": "cb23d30a1fabd0d7d9d892b09323e56fcaf456e5"
+    },
+    {
+      "path": "public/images/portfolio/physicians-primary-care.jpg",
+      "git_blob_sha": "3427eb9b2924e440b38e11979935bb9404d10d30",
+      "deployment_sha1": "cb23d30a1fabd0d7d9d892b09323e56fcaf456e5"
+    },
+    {
+      "path": "public/images/portfolio/del-prado-plaza.jpg",
+      "git_blob_sha": "c208f91c700f559aadf51e853154edba0f808bbb",
+      "deployment_sha1": "ade21a845d6d692019cd910cd0ca4feeedb0cb77"
+    },
+    {
+      "path": "public/images/portfolio/fish-tale-sales-center.jpg",
+      "git_blob_sha": "c208f91c700f559aadf51e853154edba0f808bbb",
+      "deployment_sha1": "ade21a845d6d692019cd910cd0ca4feeedb0cb77"
+    },
+    {
+      "path": "public/images/portfolio/hooters-cape-coral.jpg",
+      "git_blob_sha": "c208f91c700f559aadf51e853154edba0f808bbb",
+      "deployment_sha1": "ade21a845d6d692019cd910cd0ca4feeedb0cb77"
+    },
+    {
+      "path": "public/images/portfolio/il-cielo-restaurant-sanibel-fl.jpg",
+      "git_blob_sha": "c208f91c700f559aadf51e853154edba0f808bbb",
+      "deployment_sha1": "ade21a845d6d692019cd910cd0ca4feeedb0cb77"
+    },
+    {
+      "path": "public/images/portfolio/northside-plaza.jpg",
+      "git_blob_sha": "c208f91c700f559aadf51e853154edba0f808bbb",
+      "deployment_sha1": "ade21a845d6d692019cd910cd0ca4feeedb0cb77"
+    },
+    {
+      "path": "public/images/portfolio/estero-high-school.jpg",
+      "git_blob_sha": "fc520d5edfa0964224494babc0cc106855e9e846",
+      "deployment_sha1": "f22e4d052490ca809db4cdade78d796ebfe4470e"
+    },
+    {
+      "path": "public/images/portfolio/holy-nativity-episcopal-school.jpg",
+      "git_blob_sha": "fc520d5edfa0964224494babc0cc106855e9e846",
+      "deployment_sha1": "f22e4d052490ca809db4cdade78d796ebfe4470e"
+    },
+    {
+      "path": "public/images/portfolio/mirror-lakes-elementary.jpg",
+      "git_blob_sha": "fc520d5edfa0964224494babc0cc106855e9e846",
+      "deployment_sha1": "f22e4d052490ca809db4cdade78d796ebfe4470e"
+    },
+    {
+      "path": "public/images/portfolio/colonial-country-club.jpg",
+      "git_blob_sha": "9f6bb3312b95fc7e5eefa4e7d9391478bee379d7",
+      "deployment_sha1": "201d07dccc7f6e4e0b780a497d1cbdce56a5db94"
+    },
+    {
+      "path": "public/images/portfolio/corporate.jpg",
+      "git_blob_sha": "9e9cfd5b3b1a686f1f7be53fb44b603cad73064c",
+      "deployment_sha1": "e9782cb9b02d092cd81809099f303b8aa7c9178f"
+    },
+    {
+      "path": "public/images/portfolio/crossfit-fort-myers.jpg",
+      "git_blob_sha": "2eff61ae9f727bc6b9ce2dba7ac5587eb659a509",
+      "deployment_sha1": "ae17f506edb69132e99e17b5e8b74e32a300c35e"
+    },
+    {
+      "path": "public/images/portfolio/cypress-lake-united-methodist-church.jpg",
+      "git_blob_sha": "8ba2b7ee95763bad5e671bb8ad7b6069a6246216",
+      "deployment_sha1": "469896926c1ec4981332ed735833aa2a3ca0ae31"
+    },
+    {
+      "path": "public/images/portfolio/dean-st.jpg",
+      "git_blob_sha": "8219b00612cdbc21b847a2c7bb70146bf6207f8f",
+      "deployment_sha1": "2734d800575dd754f4bae44b59a2ad23abbdece5"
+    },
+    {
+      "path": "public/images/portfolio/dunkin-donuts.jpg",
+      "git_blob_sha": "9133020158fcad71d555f47566c36f666eed8848",
+      "deployment_sha1": "40151afb3bef48a5b86fa44698c4513685f8bc81"
+    },
+    {
+      "path": "public/images/portfolio/hotel-indigo.jpg",
+      "git_blob_sha": "b17dd72582c73da2108d7f4a7fff92f3ff5b653f",
+      "deployment_sha1": "323b4789c92b8cb7e707cd4bd466279582b70c56"
+    },
+    {
+      "path": "public/images/portfolio/johnson-engineering.jpg",
+      "git_blob_sha": "011bd9b6af0ae07dd91e07687cc6e12fc784bcfb",
+      "deployment_sha1": "0f08f212280ef1e1fa55289f3694cb5110554a70"
+    },
+    {
+      "path": "public/images/portfolio/legends-golf-country-club.jpg",
+      "git_blob_sha": "ccbf63f22a1f534f89c2c2d83227c3cc40ce7ad6",
+      "deployment_sha1": "605bf52f9436cf07399b318d7088203ac8590a72"
+    },
+    {
+      "path": "public/images/portfolio/market-place-commons.jpg",
+      "git_blob_sha": "c3bc45488a133b0bef13b5bd048acb1eef9126e0",
+      "deployment_sha1": "a6cb34f8a94961e3c8d6f9b4a53548fa4b030b0b"
+    },
+    {
+      "path": "public/images/portfolio/peace-river-baptist-church.jpg",
+      "git_blob_sha": "7da2ea6c28633c4df02304343ae16a3073dc202f",
+      "deployment_sha1": "41dd2266cfde1f07201894ca740379f202316809"
+    },
+    {
+      "path": "public/images/portfolio/regatta-naples.jpg",
+      "git_blob_sha": "9c0cb49483873828ea6423954bbc559b70277adb",
+      "deployment_sha1": "7ae4a274eb1fa1fcb8d1a4ed64e800d4f97a5755"
+    },
+    {
+      "path": "public/images/portfolio/regatta.jpg",
+      "git_blob_sha": "40cbd5ed6a1af0298c04226e98d209ac7bd69487",
+      "deployment_sha1": "f06ed30a2b3939c85933c3aa4b820060d167cfc5"
+    },
+    {
+      "path": "public/images/portfolio/riverside-club.jpg",
+      "git_blob_sha": "77e69512491c0a3c6c51dbde407343a5105e0ab1",
+      "deployment_sha1": "2c15b9dcc699ca05e45d7e6f9caec1c28616b06e"
+    },
+    {
+      "path": "public/images/portfolio/rt-moore-warehouse.jpg",
+      "git_blob_sha": "4076daabc7798d8ba6012338e3113f3e11de0074",
+      "deployment_sha1": "9b74c4086c2e57f25606f02d5ddb771e49bf0054"
+    },
+    {
+      "path": "public/images/portfolio/shadow-wood-country-club.jpg",
+      "git_blob_sha": "73f36fca43aea2a4721e2eb2796d3e7632f032ef",
+      "deployment_sha1": "66ba21725cbeb71701845e9a0cb9fda49368a946"
+    },
+    {
+      "path": "public/images/portfolio/shady-acres-rv-park.jpg",
+      "git_blob_sha": "89a71f006bbfdf27f174527d7b934df46599616a",
+      "deployment_sha1": "dc5e88409442b3343d57612c7f91676d0908d5fe"
+    },
+    {
+      "path": "public/images/portfolio/site-safety.jpg",
+      "git_blob_sha": "148b766aca5077a61884a81d6dcea7caf8cd9150",
+      "deployment_sha1": "5e288dcb7fd42ff682a39079777b9777195dba82"
+    },
+    {
+      "path": "public/images/portfolio/st-ann-s-elementary.jpg",
+      "git_blob_sha": "ec212f56170ff4609a15fce34ec177950e5f0668",
+      "deployment_sha1": "8c0adc62b867891adf13727fb50ec8a0173f9f8e"
+    },
+    {
+      "path": "public/images/portfolio/st-elizabeth-seton-school.jpg",
+      "git_blob_sha": "136ab3bfe0c64142bdadfff20c979f448f0f6266",
+      "deployment_sha1": "0c26bce108e5359cc82baea8052399c9ed5ac6aa"
+    },
+    {
+      "path": "public/images/portfolio/the-club-at-sterling-oaks.jpg",
+      "git_blob_sha": "cce06e1d598ac70eea981c07990ec8dcfff35b78",
+      "deployment_sha1": "013a845dc04cffaac66e4686ef1465fc496f2164"
+    },
+    {
+      "path": "public/images/portfolio/thumbnail-generic.jpg",
+      "git_blob_sha": "f88dcb52f8cbda05f9cd63ac5ee70e635bade5ed",
+      "deployment_sha1": "d725e00feb7081c613a50aa317776a8700f26309"
+    },
+    {
+      "path": "public/images/portfolio/tpo-retrofit.jpg",
+      "git_blob_sha": "f0e1eb3e545f1b8e7b4ac91c1ae75807e4c62b8b",
+      "deployment_sha1": "16786b9f1f133fa6e663f3efd9e7953031b513e9"
+    },
+    {
+      "path": "public/images/portfolio/vault-structures.jpg",
+      "git_blob_sha": "c2556564a8229e1e4aba7d188b4ad6597eaa8c2b",
+      "deployment_sha1": "eff6f37d5556836c548b852815de4bf833c824a6"
+    },
+    {
+      "path": "public/images/portfolio/watertest.jpg",
+      "git_blob_sha": "6106e49208e01fb8ccd55a8f60715fd13b8fb5ec",
+      "deployment_sha1": "6d6f348848e28668b11d853678a36b46578595ce"
+    },
+    {
+      "path": "public/images/portfolio/willow-glen.jpg",
+      "git_blob_sha": "3abddf4d0702f506bf5eabd0c3483fe1c65a34aa",
+      "deployment_sha1": "5053e0e88afbde3cc907c0c797d2a89e9a6f1c48"
+    },
+    {
+      "path": "public/images/portfolio/winged-foot-title.jpg",
+      "git_blob_sha": "b6cc97c17fcd2c319d3015949d9aabc1786d03cc",
+      "deployment_sha1": "ab36df9e0557fd42b2e346b82cf0af3dad62d071"
+    },
+    {
+      "path": "public/images/roof_survey_infographic.png",
+      "git_blob_sha": "d8e674e6ee59769ef48bac155aa93db2a9735a29",
+      "deployment_sha1": "280c5b30ececae0bcb98c3c201e0808fd67d9ed5"
+    },
+    {
+      "path": "public/images/roof_survey_infographic_v3.png",
+      "git_blob_sha": "d8e674e6ee59769ef48bac155aa93db2a9735a29",
+      "deployment_sha1": "280c5b30ececae0bcb98c3c201e0808fd67d9ed5"
+    },
+    {
+      "path": "public/images/team/arturo-reyes.jpg",
+      "git_blob_sha": "2884d74bd79e61c99efe267b461122c018dae994",
+      "deployment_sha1": "d1fc9a704d661dbe0567bee2839344565b242b91"
+    },
+    {
+      "path": "public/images/team/brent-westerfield.jpg",
+      "git_blob_sha": "6be0952cad71777d15ceed5bba7beb2eaee8a335",
+      "deployment_sha1": "fb802cdd8570218f15ea5954571654e5f84e57fa"
+    },
+    {
+      "path": "public/images/team/casey-crowther.jpg",
+      "git_blob_sha": "6e77428d02dca6c3808bd6eb6a101abe5ee1966e",
+      "deployment_sha1": "6ff3a3d536097113756de67ebb74772bdf051672"
+    },
+    {
+      "path": "public/images/team/chayla-carlyle.jpg",
+      "git_blob_sha": "73866a1936aec260a55f4c8020679004400f15eb",
+      "deployment_sha1": "0bc1260d602858f8273e47199cb67dcc3c351eb9"
+    },
+    {
+      "path": "public/images/team/erik-depaz.jpg",
+      "git_blob_sha": "55bb61e28eef91609490f4825760133be5b47e5c",
+      "deployment_sha1": "85dc71636ce877afd203e833de226450f9252b58"
+    },
+    {
+      "path": "public/images/team/haylee-vanzeyl.png",
+      "git_blob_sha": "7355340bc0fb434e0b2a3dc38de5ce057711a6dc",
+      "deployment_sha1": "b8913d75fc61415a500ad272180994f0965b0809"
+    },
+    {
+      "path": "public/images/team/john-sherwood.jpg",
+      "git_blob_sha": "9a766d8115c3c722b5fbf8a933393b67a7d9950a",
+      "deployment_sha1": "bc8108889a59123ffbf1040920d4e10d686b6da6"
+    },
+    {
+      "path": "public/images/team/matt-oberski.jpg",
+      "git_blob_sha": "b2a18187bfbfc292b0bb5b55779d428e7f1a27c1",
+      "deployment_sha1": "474eb8cc20217e658ac3e4002b2af32545e9adf6"
+    },
+    {
+      "path": "public/images/team/patrick-davis.jpg",
+      "git_blob_sha": "b952d15bdc582ca2284dcdfa090030ac67559c9d",
+      "deployment_sha1": "0cc3a5157875ea0d25e6f694897623e4eb20c5ec"
+    },
+    {
+      "path": "public/images/team/sarka-heatherington.jpg",
+      "git_blob_sha": "9d823e673b846d9fd2ca6c012b2582a42193db01",
+      "deployment_sha1": "450ba1091518b4ab230a0ab54ee05d366948b77b"
+    },
+    {
+      "path": "public/images/team/shanda-carpenter.jpg",
+      "git_blob_sha": "92a2d7d1d782ae3c6ada7eaab6c57ded77bf101f",
+      "deployment_sha1": "e1a4f89ed561d56486a9d1660ff74a3339174117"
+    },
+    {
+      "path": "public/next.svg",
+      "git_blob_sha": "5174b28c565c285e3e312ec5178be64fbeca8398",
+      "deployment_sha1": "3f3e95622612b989c5bd6a03299a308c6f3c7e6b"
+    },
+    {
+      "path": "public/og-image.jpg",
+      "git_blob_sha": "f142c45993a2411a35f06d01a5b2fb29a2e4541c",
+      "deployment_sha1": "a6d3a1f3866e474bd77dd55b7ceff98e368063d2"
+    },
+    {
+      "path": "public/podcast/name-options/01-kitchen-table-ai.png",
+      "git_blob_sha": "1d10aaee4acf7ce0db3da1ffd615154449664671",
+      "deployment_sha1": "da7ee75c26e8a8b78d507e9f9e415b1b55698628"
+    },
+    {
+      "path": "public/podcast/name-options/01-kitchen-table-ai.webp",
+      "git_blob_sha": "5e8b54b77a40d8f8f2add6276e30490c2d706246",
+      "deployment_sha1": "f7de5d5870372035f2969ac51a1d2f075322fa8c"
+    },
+    {
+      "path": "public/podcast/name-options/02-everyday-operators.png",
+      "git_blob_sha": "3a484f4528c5df6d11b92da3fc907575621fd045",
+      "deployment_sha1": "67ac09d980166b5354d363a918064b7213936504"
+    },
+    {
+      "path": "public/podcast/name-options/02-everyday-operators.webp",
+      "git_blob_sha": "14c20dfbb5bf6c045d471404072e3d4ffaad154d",
+      "deployment_sha1": "cc533fd70516fb9c0dac97164507542c4057f9a8"
+    },
+    {
+      "path": "public/podcast/name-options/03-day-job-ai.png",
+      "git_blob_sha": "787d538f3f249d06a0f24a73fbaca4b17f19cbaa",
+      "deployment_sha1": "72674d58b6f88ae0a2e2da517dacfc0782f30505"
+    },
+    {
+      "path": "public/podcast/name-options/03-day-job-ai.webp",
+      "git_blob_sha": "b4758dca8ddd1248e4ffa8513bcf18c3ff8621dd",
+      "deployment_sha1": "3dbd6de748d4a9f4ff404e7fd956fb2f9c7ffc5e"
+    },
+    {
+      "path": "public/podcast/name-options/04-after-the-demo.png",
+      "git_blob_sha": "afe16eb1aa0a737a155615e2ccce0696c0b5f19d",
+      "deployment_sha1": "acea85b99b544dc72c2222c7f8c188a6c1f84092"
+    },
+    {
+      "path": "public/podcast/name-options/04-after-the-demo.webp",
+      "git_blob_sha": "b0cc0407f2eb2b90b92ae00b435087924f6044d7",
+      "deployment_sha1": "0cfc181481ec1d54723dd28886a5500641222eab"
+    },
+    {
+      "path": "public/podcast/name-options/06-ai-with-a-payroll.png",
+      "git_blob_sha": "6ce59d3a48e760288e0b6461c04cf0c826307e21",
+      "deployment_sha1": "483e138f970622f2cdc5e74b299a1604dc57f1eb"
+    },
+    {
+      "path": "public/podcast/name-options/06-ai-with-a-payroll.webp",
+      "git_blob_sha": "a0549826bd80361d9661692a25babb92d60824c4",
+      "deployment_sha1": "969fac37708dcffade279230375ac952fec9b0c8"
+    },
+    {
+      "path": "public/podcast/name-options/08-more-than-two-trucks.png",
+      "git_blob_sha": "e1ad7e59bf7ebcc65d288937458415267a5570e0",
+      "deployment_sha1": "eb0b943922735a05b5f0af6f00b109c685cee172"
+    },
+    {
+      "path": "public/podcast/name-options/08-more-than-two-trucks.webp",
+      "git_blob_sha": "2df7bccafc937836e3770499d892404f712b5ac9",
+      "deployment_sha1": "73271f10dac23e217510d6fd463f8e382b28e1de"
+    },
+    {
+      "path": "public/podcast/name-options/09-blue-collar-compute.png",
+      "git_blob_sha": "f8289d32da7a093e8209ae4086f3163cc16e2fce",
+      "deployment_sha1": "70b504c17bf13b1b1d87cfe0a1eb0f72824be312"
+    },
+    {
+      "path": "public/podcast/name-options/09-blue-collar-compute.webp",
+      "git_blob_sha": "601dd6ee144ed0b0b86b124f090017e3c851dd34",
+      "deployment_sha1": "4d94ef35a4711eed1ddf4db2cca38dc75d2d6a7e"
+    },
+    {
+      "path": "public/podcast/name-options/10-the-automation-yard.png",
+      "git_blob_sha": "3424ddf6fba6c10037a5b8eeeebce3553d587ad2",
+      "deployment_sha1": "f39919f4ee59712e8cfd63a7eeb0c08605879a41"
+    },
+    {
+      "path": "public/podcast/name-options/10-the-automation-yard.webp",
+      "git_blob_sha": "dd3f2eca62b7f222b2b2aa510478084b6d830e21",
+      "deployment_sha1": "52d07ee75dd450761f50bd23d835e934333e4fdc"
+    },
+    {
+      "path": "public/podcast/name-options/11-working-ai.png",
+      "git_blob_sha": "506a8188a9ac735ea4213187e62ab198bb6baa47",
+      "deployment_sha1": "38635681381028d110232ecc3bf8b16e4c6e17df"
+    },
+    {
+      "path": "public/podcast/name-options/11-working-ai.webp",
+      "git_blob_sha": "7dfdc144ed79ddc85c835bbf8e1c0ceb63d0ad4d",
+      "deployment_sha1": "be2ef06086b8f4ceda50f9edb1461e20b7cd14c5"
+    },
+    {
+      "path": "public/podcast/name-options/12-ordinary-ai.png",
+      "git_blob_sha": "ad2d72472dd46ff2aa466abc098e5f8897546b70",
+      "deployment_sha1": "c1f58233ffa7af81cf7f924953f83f945d1e3d62"
+    },
+    {
+      "path": "public/podcast/name-options/12-ordinary-ai.webp",
+      "git_blob_sha": "3bf76f5115956c53d2181dfdbbd6d58d284dc1d4",
+      "deployment_sha1": "8265f9e06cf7c947586a824de00c8b2edeed1756"
+    },
+    {
+      "path": "public/robots.txt",
+      "git_blob_sha": "2c5e36fa100bc8b2c73983f7917c3b5d74f6c8f6",
+      "deployment_sha1": "18c0565eb2d05fc0528221326c25251043ac8b5a"
+    },
+    {
+      "path": "public/vercel.svg",
+      "git_blob_sha": "77053960334e2e34dc584dea8019925c3b4ccca9",
+      "deployment_sha1": "cebb8852d58c8886be3e9051a26957f42bb82f1a"
+    },
+    {
+      "path": "public/window.svg",
+      "git_blob_sha": "b2b2a44f6ebc70c450043c05a002e7a93ba5d651",
+      "deployment_sha1": "54c48e0daa6caa317fe1b4c419007fd93e948db9"
+    },
+    {
+      "path": "scripts/admin-console-routes.test.mjs",
+      "git_blob_sha": "d6279d85d607a0b05074217cdd9fb196d4c35908",
+      "deployment_sha1": "655d804be94e535bb5b09a2d119411cea503e076"
+    },
+    {
+      "path": "scripts/company-tool-routes.test.mjs",
+      "git_blob_sha": "d1f11dceb19a083b39b47678d346a230c5e25d17",
+      "deployment_sha1": "4d31c3cb31a55f098aa433a42a330409f1bdf5ba"
+    },
+    {
+      "path": "scripts/marketing-route.test.mjs",
+      "git_blob_sha": "83b8131a3a6dd006e63650b4d191873b02021cd4",
+      "deployment_sha1": "1dd576e31db402f359048e77e122dde258840b10"
+    },
+    {
+      "path": "scripts/ops/telegram-setup.sh",
+      "git_blob_sha": "6a1c24690e12c7ad7d88f4a8a6a74f8470121fad",
+      "deployment_sha1": "319ca07ef7777469faa4c62fe64cc9634fc07989"
+    },
+    {
+      "path": "security-tests/admin-actions.test.mjs",
+      "git_blob_sha": "d7b2cb21cb17da0f95f251c43121f82717f4a3d3",
+      "deployment_sha1": "caefbd1956cb929b0461b1ffd3875e8042801716"
+    },
+    {
+      "path": "security-tests/admin-console-logout.test.mjs",
+      "git_blob_sha": "75fae589637fc59bd344cfa3fe5f27098e8e040d",
+      "deployment_sha1": "c82a8ec2ac59775bbbfd38f7d8e8e238dc6e080f"
+    },
+    {
+      "path": "security-tests/admin-console-navigation.test.mjs",
+      "git_blob_sha": "251723a73bca9849d399920015cccbc4fddc33c6",
+      "deployment_sha1": "47136f646b84c8a29c3a0fa7d1b5ec7b4db54ba2"
+    },
+    {
+      "path": "security-tests/chat-copy.test.mjs",
+      "git_blob_sha": "2335bb28302d7dc747c29f4d477827813c966fb0",
+      "deployment_sha1": "4c70a643e3f10854f3ec13a7465ae58920dfcebe"
+    },
+    {
+      "path": "security-tests/chat-lead-marker.test.mjs",
+      "git_blob_sha": "36fafe841925dd61d6ce4f292830e763737aedec",
+      "deployment_sha1": "17297e8b3e399b23d6ad00b85e1e75cb96b5eef3"
+    },
+    {
+      "path": "security-tests/office-admin-actor.test.mjs",
+      "git_blob_sha": "882865a6b8f688fc7128c638a5f1ea67f592f833",
+      "deployment_sha1": "2822c08193a0c6de03ca75201c0dc904c640b4e6"
+    },
+    {
+      "path": "security-tests/office-admin-session.test.mjs",
+      "git_blob_sha": "66b5b3dc4e24a28ae121fcf777c0f11456bd0e8a",
+      "deployment_sha1": "c978acb078b4cea6132493acfad5bf6b1e059607"
+    },
+    {
+      "path": "security-tests/ops-db.test.mjs",
+      "git_blob_sha": "b32c686dfd1e219428a70424575b0fba996579ed",
+      "deployment_sha1": "e2d1d132aa2a3f9b907f437eed1d4644944e3dec"
+    },
+    {
+      "path": "seo-tests/award-consolidation.mjs",
+      "git_blob_sha": "c5d6cc0205472f97d667162e14ade303c155ea25",
+      "deployment_sha1": "497de5e8c4c4ea4049a552f4b8c657b3ea58c89d"
+    },
+    {
+      "path": "seo-tests/chat-delivery.test.mjs",
+      "git_blob_sha": "a6fc15e4a6e0d111df509543b2ecaead53d0599a",
+      "deployment_sha1": "dec2732b25c9d3fd4d5620186b803b8d1c00ccf4"
+    },
+    {
+      "path": "seo-tests/crawl.mjs",
+      "git_blob_sha": "fae0800a184a5688ef231a5ca068e7e04c2aa499",
+      "deployment_sha1": "c0fdfeeb29551094adc036409227089c562e96c9"
+    },
+    {
+      "path": "seo-tests/inline-confirmation.test.mjs",
+      "git_blob_sha": "63eeff496db805cc93c8058a1eeb684b734b1ce6",
+      "deployment_sha1": "64f4211c3dbd109b03d9c7f421f9aa8504f5d3cf"
+    },
+    {
+      "path": "seo-tests/portfolio-schema.mjs",
+      "git_blob_sha": "5e5b69a9f7dbe4cdf60fcde17849c7b945239a05",
+      "deployment_sha1": "0f6be588db83c7e95d524c04cb03b41aaa6440cc"
+    },
+    {
+      "path": "seo-tests/render-fallbacks.mjs",
+      "git_blob_sha": "2c63272b68840af57a916bba8857dabaae4541bd",
+      "deployment_sha1": "2094680d7712cb9e21e0f9966b396ec071b9a8e6"
+    },
+    {
+      "path": "seo-tests/tracking.test.mjs",
+      "git_blob_sha": "7bda36dd1c9ad7d7ecb527ee431a682a3b1d56c7",
+      "deployment_sha1": "f4792c137aabcacc123a63554b9dc34dbaca8551"
+    },
+    {
+      "path": "setup-portfolio-images.js",
+      "git_blob_sha": "1d093a44b9da4668c2edcada80ee3e5853196de4",
+      "deployment_sha1": "000a0e1049c88a4a3138be62832b7b897782ab05"
+    },
+    {
+      "path": "src/app/about/page.tsx",
+      "git_blob_sha": "9f8f7fc2c6e06f4a8539a3d6e51ebdca80b7dfda",
+      "deployment_sha1": "a4c15fb0cd78cef015e0084112351f38771f53b5"
+    },
+    {
+      "path": "src/app/actions.ts",
+      "git_blob_sha": "3d7b92be316d42a2a98ac0dbc8ba5cec7052a46e",
+      "deployment_sha1": "eb2dfce47bb5b610a70e6241ffa740f32b351e4e"
+    },
+    {
+      "path": "src/app/admin/_ops/AdminLogin.tsx",
+      "git_blob_sha": "3df5c8bf8750f8ec203f4b8f5c2514fa77d5982a",
+      "deployment_sha1": "42b5a2a6740d938df0d0782ae81063bc784dffcd"
+    },
+    {
+      "path": "src/app/admin/_ops/AdminShell.tsx",
+      "git_blob_sha": "f214440e467a7db1fcd15c446db558673fde137c",
+      "deployment_sha1": "990dffd6082c12f4337c34652f447e8a5a3c3eb5"
+    },
+    {
+      "path": "src/app/admin/_ops/AdminWelcome.tsx",
+      "git_blob_sha": "d5266ebcf10f32555e50f313bdd5299556f4be9e",
+      "deployment_sha1": "c689f5776bd3fe7d1b4304f9beb84f1f390bad4d"
+    },
+    {
+      "path": "src/app/admin/_ops/ConsoleContext.tsx",
+      "git_blob_sha": "138f1aea90e359ddd3e7bb87458e08ea948e1d9f",
+      "deployment_sha1": "3da522776f292e04f0232b29b1ee9b8c46734b14"
+    },
+    {
+      "path": "src/app/admin/_ops/actions.ts",
+      "git_blob_sha": "df353835fa5cb8b0482ebacfe826daee823d967f",
+      "deployment_sha1": "916f01472fb3f7e1e91e86d39f6da06f0b5557c4"
+    },
+    {
+      "path": "src/app/admin/_ops/icons.tsx",
+      "git_blob_sha": "eac54344bba4a835953844eda7ba294fee3e49db",
+      "deployment_sha1": "c203100b84cef0390a6d7aa87b35cc71e41c8ac0"
+    },
+    {
+      "path": "src/app/admin/_ops/nav.tsx",
+      "git_blob_sha": "a940bf429cf3f6284453a6ce61cac8a79e0dc5a0",
+      "deployment_sha1": "0c5e03b188dc655a6b8ab6f18b83b16222588523"
+    },
+    {
+      "path": "src/app/admin/_ops/podcast-actions.ts",
+      "git_blob_sha": "f5ec4fb026e38f865f7f5792055d94ab3d092436",
+      "deployment_sha1": "4b85eb75671d0f0d4eb92cccd94c790a89808c32"
+    },
+    {
+      "path": "src/app/admin/_ops/ui.tsx",
+      "git_blob_sha": "ddef6d727e3ec88d5bd6df504e18f5a8f8626450",
+      "deployment_sha1": "ae1388263e892c77eae02126680837c85b34387c"
+    },
+    {
+      "path": "src/app/admin/api/readiness/route.ts",
+      "git_blob_sha": "e94403309e34cda00af495decd547af7473a6d31",
+      "deployment_sha1": "ca48746c585be7d1632b20469c482cd91538d896"
+    },
+    {
+      "path": "src/app/admin/assistant/page.tsx",
+      "git_blob_sha": "f7157f5123640810ecaa65e738a90fba46c7bd06",
+      "deployment_sha1": "781e92ea9beff3bf3f1e40a3f342d7e8680deb93"
+    },
+    {
+      "path": "src/app/admin/layout.tsx",
+      "git_blob_sha": "b359147a70083eabbc95754a9258018f266c92d5",
+      "deployment_sha1": "96c7dd1632083789c636e014a9364d16f472ca60"
+    },
+    {
+      "path": "src/app/admin/meetings/[id]/page.tsx",
+      "git_blob_sha": "544f175834e1dfa22cd26588b3f05fd7e602ad0f",
+      "deployment_sha1": "89865e62f22b5d0e5983f898c08aaefb0281263d"
+    },
+    {
+      "path": "src/app/admin/meetings/page.tsx",
+      "git_blob_sha": "9549b370d248f0cafd2f9f978ce5b2b6e926d74a",
+      "deployment_sha1": "b5fd4a62ad0927eb58d80150b88c9cdcf1e02b33"
+    },
+    {
+      "path": "src/app/admin/page.tsx",
+      "git_blob_sha": "a911236e21a4940de087be45f9f6af055d692d0c",
+      "deployment_sha1": "33e7d3d513412265fc52f44d2c408efbe767a0e3"
+    },
+    {
+      "path": "src/app/admin/podcast/page.tsx",
+      "git_blob_sha": "3423b30343bb87698fe8ff0315fe0cdb1209cbcc",
+      "deployment_sha1": "d975059ef23a276c6c438a3b498292604108087b"
+    },
+    {
+      "path": "src/app/admin/tasks/page.tsx",
+      "git_blob_sha": "03a1812bffd804c6a628e7e0c7d49a74a5e60cf9",
+      "deployment_sha1": "592b3dc8f476b7a9dc2a500acc79d795e4796554"
+    },
+    {
+      "path": "src/app/api/admin/assistant/route.ts",
+      "git_blob_sha": "fb6650e22e12c44362b9da84f1debbb5d924da85",
+      "deployment_sha1": "5042a2a6cb645da0587018db8b3c1190e918022a"
+    },
+    {
+      "path": "src/app/api/agent/tools/[tool]/route.ts",
+      "git_blob_sha": "d4ffc969c64382847f59a1cc313ee26625fd33b1",
+      "deployment_sha1": "dcbd678b5fbbc227eb96d5fb11b8e53c58b60797"
+    },
+    {
+      "path": "src/app/api/chat/route.ts",
+      "git_blob_sha": "d8d33d5a1ad3cfc0ea25a30fd79359a5b395c94c",
+      "deployment_sha1": "71d740734f9fd4a1e2538712edb114127fb16e8a"
+    },
+    {
+      "path": "src/app/api/meetings/[id]/process/route.ts",
+      "git_blob_sha": "25f56b1c9c53185712ef061486ad7b9aaba4f3d8",
+      "deployment_sha1": "6bc907cf811b986970034c8eef587790aeeebd77"
+    },
+    {
+      "path": "src/app/api/meetings/ingest/route.ts",
+      "git_blob_sha": "2ba4cc6d5c53d8e3ad59b14519de2d3e9a0829d6",
+      "deployment_sha1": "61b0b30e73ff347af75df4a484f55f636099e971"
+    },
+    {
+      "path": "src/app/api/podcast/episodes/[id]/notes/route.ts",
+      "git_blob_sha": "51f1750b199e9600b5430acd4309fa7cbe938581",
+      "deployment_sha1": "bcf124f61c857cf98f38ed6d8f6a829778b0d5fe"
+    },
+    {
+      "path": "src/app/api/telegram/webhook/route.ts",
+      "git_blob_sha": "d9dafbb8a965da547a3db1dbb66e8b06b1f41ac6",
+      "deployment_sha1": "b72470047f29902c03a5fdba08352d2f52b0f3db"
+    },
+    {
+      "path": "src/app/careers/page.tsx",
+      "git_blob_sha": "723c22da640b2b1325fd910dd8215323f000d665",
+      "deployment_sha1": "eb887e4e5848cada680b31720c1b0cd3a65b0d2a"
+    },
+    {
+      "path": "src/app/commercial-hoa-roof-maintenance/page.tsx",
+      "git_blob_sha": "8edb883eb430aedacd63b906525faa157d994f12",
+      "deployment_sha1": "73f514539998373413ca67bda039e50c219ee790"
+    },
+    {
+      "path": "src/app/contact/layout.tsx",
+      "git_blob_sha": "cd175ae9b5e0b2ba1e2896323dd98b7f9c78558e",
+      "deployment_sha1": "eb8b2a829eac7658dc5d78625b4aa5a986a5e7c7"
+    },
+    {
+      "path": "src/app/contact/page.tsx",
+      "git_blob_sha": "3ad28faff3ec5b7e76871bc305d8622964d95279",
+      "deployment_sha1": "f58d684ec3718da1d35e2ab151e9af5190c0a73c"
+    },
+    {
+      "path": "src/app/favicon.ico",
+      "git_blob_sha": "718d6fea4835ec2d246af9800eddb7ffb276240c",
+      "deployment_sha1": "9ecfcc8f0ead0bf3d2d7c39e084b88f41cc89a2e"
+    },
+    {
+      "path": "src/app/financing/page.tsx",
+      "git_blob_sha": "81ee7899c3182ea35db075827bd87bb45f10046c",
+      "deployment_sha1": "1252f913df256f4cf764aa5d373b9ad6c36507e3"
+    },
+    {
+      "path": "src/app/globals.css",
+      "git_blob_sha": "8442db9302a47cca6bf173e521993299c10dfaed",
+      "deployment_sha1": "8f374b0b89933ec84daa5116a874de08ff741550"
+    },
+    {
+      "path": "src/app/layout.tsx",
+      "git_blob_sha": "c41fd149c5834f4702b316941750f85a3308e03e",
+      "deployment_sha1": "54b91ac32b4c5e22e3417f93cb079a57caecd003"
+    },
+    {
+      "path": "src/app/locations/[city]/[service]/page.tsx",
+      "git_blob_sha": "01e6d6dbed7573590c58a30795557d41018b7781",
+      "deployment_sha1": "85d2ed64494aeb4685d1699a7a6cd386fbe4e508"
+    },
+    {
+      "path": "src/app/locations/[city]/page.tsx",
+      "git_blob_sha": "5bd2d80eec23acd1b2228c261dcfa6b43b717e7c",
+      "deployment_sha1": "a5f989d2362f2463e33bfbff964a39b6fee5af8a"
+    },
+    {
+      "path": "src/app/locations/page.tsx",
+      "git_blob_sha": "83c9a914c1afec830483d8e59091986f25fe626a",
+      "deployment_sha1": "3544287aab9c4d4e8a8a890e8b4af1e6e064cfbd"
+    },
+    {
+      "path": "src/app/mobile-privacy-policy/page.tsx",
+      "git_blob_sha": "7250c9b501c43aead20430b8c702afd45a0ebe5c",
+      "deployment_sha1": "62254fdaf9e068b55913ed9502f238d122333504"
+    },
+    {
+      "path": "src/app/our-process/page.tsx",
+      "git_blob_sha": "6aadf76eb2f235b6fdef5351977746dd30e40702",
+      "deployment_sha1": "377ddb761340f3b95db4255f08c41fd3beacf993"
+    },
+    {
+      "path": "src/app/our-projects/layout.tsx",
+      "git_blob_sha": "8ac2bbb991362b33a8bc6b9ace57225af727f13a",
+      "deployment_sha1": "d8d04d432c41c551c457ed6ec82e880ec079c337"
+    },
+    {
+      "path": "src/app/our-projects/page.tsx",
+      "git_blob_sha": "12ec11221b37b214842a6ce97b0bf9212b299feb",
+      "deployment_sha1": "31f84c71d003693ba0cd5b49dc1ee12dc6742757"
+    },
+    {
+      "path": "src/app/our-team/page.tsx",
+      "git_blob_sha": "5ebc87e112a4fb00c5ad4eb2833e060d27ada81b",
+      "deployment_sha1": "a4a8db2b35b4378416611fbaa07b16e355af1e5e"
+    },
+    {
+      "path": "src/app/page.tsx",
+      "git_blob_sha": "b1fa0aa974bff2cc0755231b9cef5de7baa5bdfd",
+      "deployment_sha1": "d4127f14f78a120d467d27625787a47c76cab9c1"
+    },
+    {
+      "path": "src/app/podcast/feed.xml/route.ts",
+      "git_blob_sha": "35e2f490ad4b3c35aa0d956e8922dc83e4c57350",
+      "deployment_sha1": "f680aeb76e3853c2e8b73b152372ff72a5f41bd9"
+    },
+    {
+      "path": "src/app/portal/layout.tsx",
+      "git_blob_sha": "8844f768ba108a59bb74f80bf1b2bc1d01bef34b",
+      "deployment_sha1": "a12242825fb4a08ad4bf6aa02444e2a04d3fbd45"
+    },
+    {
+      "path": "src/app/portal/page.tsx",
+      "git_blob_sha": "1d2ad07177134b1af6a6ef6f984e0e0ed7edeefe",
+      "deployment_sha1": "245d011abe4aa0e81c54b13e7d0713a27921cf7d"
+    },
+    {
+      "path": "src/app/prospect-intake-form/ProspectIntakeForm.tsx",
+      "git_blob_sha": "8b3fc23ebd01a212f935c7df01abea73929ad23f",
+      "deployment_sha1": "ea20362f1ae3850fa385ea399549ef7479243a0c"
+    },
+    {
+      "path": "src/app/prospect-intake-form/actions.ts",
+      "git_blob_sha": "c816b4e80dce718ec5f473bd366dce0a2f9bb666",
+      "deployment_sha1": "94ec8a7f59b5c4c07cc75426afcdf2fa5a696bae"
+    },
+    {
+      "path": "src/app/prospect-intake-form/page.tsx",
+      "git_blob_sha": "0b26d3592facb192f693618bd0cad07c71f2171e",
+      "deployment_sha1": "14070905f772be9e5a799761e0ca0a40cbb8e47f"
+    },
+    {
+      "path": "src/app/reviews/page.tsx",
+      "git_blob_sha": "52eef153959784390b0391aca98946229c3b37ab",
+      "deployment_sha1": "516c728759a29c4f09d596923d9f14ca67d0d513"
+    },
+    {
+      "path": "src/app/roofing-services/asphalt-shingle-roofing/page.tsx",
+      "git_blob_sha": "096b62caeabb5008d9648cbbdd6e2a0ae9c55f22",
+      "deployment_sha1": "056f70ea22353660fbed72b884fea8b1c666ca9b"
+    },
+    {
+      "path": "src/app/roofing-services/built-up-roofing-bur/page.tsx",
+      "git_blob_sha": "ee6a6fbd57436123b0d56edf65e7ef7d3323d435",
+      "deployment_sha1": "f506f30652fc0ebbd9dbb23e61f3b1ab6fa80a17"
+    },
+    {
+      "path": "src/app/roofing-services/commercial-roof-repair/page.tsx",
+      "git_blob_sha": "633bd408e6b0135949bb9db299792c4ee954831f",
+      "deployment_sha1": "70f7b0947b1b179ca2134ba34153966764eaa95c"
+    },
+    {
+      "path": "src/app/roofing-services/emergency-storm-repair/page.tsx",
+      "git_blob_sha": "dfd9b81decb968e3ea89ac920bdec23ae0946739",
+      "deployment_sha1": "388db5b84edc2514e646404f25c02607c2201f3b"
+    },
+    {
+      "path": "src/app/roofing-services/metal-roofing-systems/page.tsx",
+      "git_blob_sha": "03222d5c0cddf5a2a83e13cdf54b26a6d48a13ea",
+      "deployment_sha1": "9b2180d18494570810d5bc9fcac64212456ce317"
+    },
+    {
+      "path": "src/app/roofing-services/page.tsx",
+      "git_blob_sha": "4f7486cd82cd028856e1107e8302da3f556ee9d7",
+      "deployment_sha1": "3c94b21fd3c95c14ce6bb8f940159e9529af6d68"
+    },
+    {
+      "path": "src/app/roofing-services/roof-inspections-surveys/page.tsx",
+      "git_blob_sha": "0306707060a7cdc5c9191979ed916a664d306638",
+      "deployment_sha1": "18a4ceb1d9de178837c04fad480c0acb49f744a1"
+    },
+    {
+      "path": "src/app/roofing-services/roof-repair/page.tsx",
+      "git_blob_sha": "c9895c76d87fc5f8fdc8ac0d2b7a6f3f892a1423",
+      "deployment_sha1": "5395395af237cdbe9680658957c5dab6cbccd093"
+    },
+    {
+      "path": "src/app/roofing-services/roof-replacement/page.tsx",
+      "git_blob_sha": "376664d8a3812f24ec6c806eb5e2bdb8eb1a5341",
+      "deployment_sha1": "925650ed407fef17c003eb05ac3f24a6239f3632"
+    },
+    {
+      "path": "src/app/roofing-services/tile-roofing/page.tsx",
+      "git_blob_sha": "c225c55c3715de6b8cb731df3c9e75a84d7b471d",
+      "deployment_sha1": "46cf42efd1432a780dadd96a1cb426e028658076"
+    },
+    {
+      "path": "src/app/roofing-services/tpo-pvc-membrane-roofing/page.tsx",
+      "git_blob_sha": "b9549d300ff0d178e180a354b03c0bfc858adef4",
+      "deployment_sha1": "af96d4fa1ac5b8027b4ded133056775a2a20c2d7"
+    },
+    {
+      "path": "src/app/roofing-services/waterproofing-coating-systems/page.tsx",
+      "git_blob_sha": "966ee4a2c1f9bf8835ef705f80c34e32eb22e048",
+      "deployment_sha1": "2378048c6f6a4981b9f0d51207bc8c573b0a6196"
+    },
+    {
+      "path": "src/app/sitemap.ts",
+      "git_blob_sha": "320e4649605ef2d5b6548f55ac8759ee028d1249",
+      "deployment_sha1": "5877f27330681a205d7197b66410c5ea0e02ab68"
+    },
+    {
+      "path": "src/app/softwash/SoftwashContactForm.tsx",
+      "git_blob_sha": "f35b2abf1ff9444312b8b2db0170617abf4d1c8a",
+      "deployment_sha1": "a7a5138a199e8ba8f06ef20f810ccdddd500eaf2"
+    },
+    {
+      "path": "src/app/softwash/page.tsx",
+      "git_blob_sha": "12c6dc51d123fcdb21cca0418408d928168e8b1f",
+      "deployment_sha1": "58c8006768fb8d972e396b3635605a3156b0b417"
+    },
+    {
+      "path": "src/app/target-news/[slug]/page.tsx",
+      "git_blob_sha": "a1e8dcf1607c641b3900b5f836f825b14ce20bc9",
+      "deployment_sha1": "3ad8cde71285dc51dfa8b6df6ed5c8c407e14aef"
+    },
+    {
+      "path": "src/app/target-news/layout.tsx",
+      "git_blob_sha": "7d3fb9756ba5cdb32a2f8b73bf162b3cddeea9a1",
+      "deployment_sha1": "1b7849ac7e26edf22414ee3fcdb882e06de272ee"
+    },
+    {
+      "path": "src/app/target-news/page.tsx",
+      "git_blob_sha": "9c695dba75488d785135153fd6a98aecedca516a",
+      "deployment_sha1": "3eee3767cc7d4ee9aa8932f6b66f9ed0910a18b8"
+    },
+    {
+      "path": "src/app/target-news/page/[page]/page.tsx",
+      "git_blob_sha": "abbdb8c225da8390699b4e6937b238bc03b8fb02",
+      "deployment_sha1": "1214f08af084f7fbd2ddf8bb9bcc1afccc34fda6"
+    },
+    {
+      "path": "src/app/video-gallery/page.tsx",
+      "git_blob_sha": "839438cde13349d5d3d5608557a6b48c0aa9de73",
+      "deployment_sha1": "4972e20c3d0310eafa6de496767e7d2b11eeac8d"
+    },
+    {
+      "path": "src/app/warranties/page.tsx",
+      "git_blob_sha": "22e71107161330c4d7e605c5929e7d6985534086",
+      "deployment_sha1": "0543625d71f9a04e4ca3771c5eb91bd6234c3d64"
+    },
+    {
+      "path": "src/app/website-privacy-policy/page.tsx",
+      "git_blob_sha": "ab4952a77bb26a0f8437dfd8f7419e5963475561",
+      "deployment_sha1": "b4fc45fb8b444628732767f57d0b11c8dfbbfe0f"
+    },
+    {
+      "path": "src/components/AnimateIn.tsx",
+      "git_blob_sha": "4367d7a8e80c4d5acc747d2c8a9f572fdf686df9",
+      "deployment_sha1": "bcef295fe80cbe2add2749c3516fd2f2bff34f74"
+    },
+    {
+      "path": "src/components/Breadcrumbs.tsx",
+      "git_blob_sha": "dc4652d609ea28f2a016d5e0b518c90b94f9db0f",
+      "deployment_sha1": "11deb8aa356ae6865552bf8bf9412ceca20f8993"
+    },
+    {
+      "path": "src/components/ChatWidget.tsx",
+      "git_blob_sha": "7f7efe92815fcca98dd9549752a0c77ce7b86f6e",
+      "deployment_sha1": "0271ce18a8b6dfaf3366537bc19e255dbcf57e4a"
+    },
+    {
+      "path": "src/components/DelayedChatWidget.tsx",
+      "git_blob_sha": "8ae54b4dda4298cb03c18b7bb355165a3b569fb2",
+      "deployment_sha1": "5b9705b671fc10ec13b810192d25cfd491024e50"
+    },
+    {
+      "path": "src/components/Footer.tsx",
+      "git_blob_sha": "4256d729ed69dc4089a1c221ec4d5573fcc2dda5",
+      "deployment_sha1": "5000cb34be768fa8f535c20a8f24601f7e9a2054"
+    },
+    {
+      "path": "src/components/Header.tsx",
+      "git_blob_sha": "43a0952fd2f0293c615d131a8941ee47a6291cc7",
+      "deployment_sha1": "ffe7a9e5b9c6e35ae3c051a2f6f87afa308c3b62"
+    },
+    {
+      "path": "src/components/InlineLeadForm.tsx",
+      "git_blob_sha": "acdc22dadeaa880fb23932b4ce828273ec8c03d3",
+      "deployment_sha1": "87ab7f2a72642a9af8a9706bd64d557ce2f042f2"
+    },
+    {
+      "path": "src/components/LegalPage.tsx",
+      "git_blob_sha": "1335d68869cbd08a870e58ecf8fe49c0250a23ae",
+      "deployment_sha1": "d0b032ce9bbe63c4751f97d137cb402f2d1ceaa9"
+    },
+    {
+      "path": "src/components/LocalRoofPlanning.tsx",
+      "git_blob_sha": "8805fc02dde2b3b146589d7caff6814e4442da76",
+      "deployment_sha1": "e4f1a25cdef6d6aa7e1f4f3b88761a496aba3a0f"
+    },
+    {
+      "path": "src/components/NewsArchive.tsx",
+      "git_blob_sha": "777d79c19621a610344e53b42d72afa65811f765",
+      "deployment_sha1": "d053dc0510f00f39f94f0e8b0fb423f1276d0976"
+    },
+    {
+      "path": "src/components/RoofSchematic.tsx",
+      "git_blob_sha": "eb7bf1882b56cbb0b9d9c4b9b57eb39e8873623e",
+      "deployment_sha1": "86c2099abfae9a482955da619513783996b1e63d"
+    },
+    {
+      "path": "src/components/TrackingListeners.tsx",
+      "git_blob_sha": "7e33957315ee7637f5e72f28d03aca6567fbd737",
+      "deployment_sha1": "3e0725444d84dc96b6cd751e7fd04f1166a008bb"
+    },
+    {
+      "path": "src/components/VideoCard.tsx",
+      "git_blob_sha": "dc2ff4878da9b72964e2531893edb993c3d4c2be",
+      "deployment_sha1": "9f798398b13fc516a136e0f14bda2fc1b6965821"
+    },
+    {
+      "path": "src/lib/chat-copy.ts",
+      "git_blob_sha": "47e0c3891346c6e782ef60e74f82c7a0b251deba",
+      "deployment_sha1": "ed5255c24ad22796809287d1f09e565ef534dac4"
+    },
+    {
+      "path": "src/lib/chat-lead-marker.ts",
+      "git_blob_sha": "f3320b7d99bdd8a1a5edfbb165a4ff69eb55fb57",
+      "deployment_sha1": "7fce0d8f044af857283403bdbc9d19d86dfcea69"
+    },
+    {
+      "path": "src/lib/form-intent.ts",
+      "git_blob_sha": "19bceceb16b43986094a35e7eeabb7f869695fdd",
+      "deployment_sha1": "848d75711772e543defddf30935699bced9fd3c2"
+    },
+    {
+      "path": "src/lib/google-reviews.ts",
+      "git_blob_sha": "648dd8f72b6202622943d964f37ed3cae4aae5d9",
+      "deployment_sha1": "c37ca86cab36348c59187fc563764fcebf15aed6"
+    },
+    {
+      "path": "src/lib/intake-staff.ts",
+      "git_blob_sha": "03770a2f626f11e874a5c4a39350c6f470772a8c",
+      "deployment_sha1": "0e959564a5359b3e7e6665c0e9bafc1406d7df4b"
+    },
+    {
+      "path": "src/lib/locations.ts",
+      "git_blob_sha": "edbae80332b015afbf449d0b2388c966bd7a3e1a",
+      "deployment_sha1": "10f4b50513b343e98dd0558cdc5d66d40a8afcf2"
+    },
+    {
+      "path": "src/lib/news.ts",
+      "git_blob_sha": "c90c14ae7e7a9258492c099c096250860785878a",
+      "deployment_sha1": "dc3b156e5bda8788d81b443ff0aa875ca6e8f5cc"
+    },
+    {
+      "path": "src/lib/notify.ts",
+      "git_blob_sha": "0df6b1285205b1c178b65f5a069a1cc7ee0b43f3",
+      "deployment_sha1": "cd90fcadcb6b31078916269dc3005f46bb726126"
+    },
+    {
+      "path": "src/lib/ops/assistant-tools.ts",
+      "git_blob_sha": "70efb9d8bd455aa0e032239db6cbc239e90b7653",
+      "deployment_sha1": "410ff3f82fb962df02feb55db52cf7cfee53acbd"
+    },
+    {
+      "path": "src/lib/ops/chat.ts",
+      "git_blob_sha": "a06d0ff1cfd51a704f481b78425aff5a083762c8",
+      "deployment_sha1": "c389a1e722419c912064252720ed511557098fba"
+    },
+    {
+      "path": "src/lib/ops/console-paths.mjs",
+      "git_blob_sha": "061bb16612332fa63169ce961983ad898260a20d",
+      "deployment_sha1": "8d8721408528f701add7f6c1513523a5b78d86fa"
+    },
+    {
+      "path": "src/lib/ops/db.ts",
+      "git_blob_sha": "c159ed3a9f0aacbac9d7b6985fa9fe410fc99da9",
+      "deployment_sha1": "c6549238fa7fc03ca37746f1523f9134ed137ff1"
+    },
+    {
+      "path": "src/lib/ops/gemini.ts",
+      "git_blob_sha": "5b94acad9e01c4084580ddb1838fbe0759a66e01",
+      "deployment_sha1": "07e61f29ed9230da80dd886485064a4a9ad772a9"
+    },
+    {
+      "path": "src/lib/ops/meetings.ts",
+      "git_blob_sha": "0268826f792699f56eef3b0c054897adc6bbb511",
+      "deployment_sha1": "6c0ac2b22ec312de9355f676fba79d769fd10993"
+    },
+    {
+      "path": "src/lib/ops/office-admin-client.mjs",
+      "git_blob_sha": "d7ace82820462a5103c658aed1f7742edeb9fd20",
+      "deployment_sha1": "cf69a5cc5ab6365e7b76db4e94b9515731abd7d9"
+    },
+    {
+      "path": "src/lib/ops/podcast.ts",
+      "git_blob_sha": "57b13ac424af243dd1a91f07b98e67daaaea1f16",
+      "deployment_sha1": "76ef233fcd4c69c8fad802488c87d8c97d303d95"
+    },
+    {
+      "path": "src/lib/ops/session.ts",
+      "git_blob_sha": "ab322fb9e19083f32bd537ca00fba2d8317c7ca0",
+      "deployment_sha1": "4633f08e7cef18e3363d0afb3a683adb3d1747fe"
+    },
+    {
+      "path": "src/lib/ops/tasks.ts",
+      "git_blob_sha": "9631f31cd1fcf173e2b834865b1145f3d6540bed",
+      "deployment_sha1": "3fc0bff8c408fd519027048384c4c9f34bd35624"
+    },
+    {
+      "path": "src/lib/supabase.ts",
+      "git_blob_sha": "8f26696d0a592b8d2e25fe46f67b816d612e7069",
+      "deployment_sha1": "3edfe8416e1b6c966d58d098ed4f8a456e52effe"
+    },
+    {
+      "path": "src/lib/tracking.ts",
+      "git_blob_sha": "6d9170670cd6d26d2e841261335f8288673e0c08",
+      "deployment_sha1": "ffc2b77436378e81ec45f2d8f93068912a8208cb"
+    },
+    {
+      "path": "src/proxy.ts",
+      "git_blob_sha": "e81caa20c8eceaefc8a835ddfdb71cf503cf8fe9",
+      "deployment_sha1": "4b59d28bf48d91f6320565a19240f9e8a32cef4f"
+    },
+    {
+      "path": "supabase/migrations/2026-09-23-ops-suite.sql",
+      "git_blob_sha": "9fac75220f6fffd40337584cdd91a5f29c6fc5e8",
+      "deployment_sha1": "8f78171e6ab4db1e58402b49a7a4ddf9b38b99e5"
+    },
+    {
+      "path": "supabase/migrations/2026-10-06-prospect-intakes.sql",
+      "git_blob_sha": "09c20486c39cd2a7275e024f2fc653a6c462bf94",
+      "deployment_sha1": "26e738a93e28e3aafdb5da497b7333b95b4e87f5"
+    },
+    {
+      "path": "tests/challenger_mobile_ux.spec.ts",
+      "git_blob_sha": "5bc8013dba00a7213669ef040ad028e90dd6c758",
+      "deployment_sha1": "2492fd674f2da9dd248016aa78193f1cc5df8a5e"
+    },
+    {
+      "path": "tests/chat_widget_opening.spec.ts",
+      "git_blob_sha": "b3da0c88653d1c5a398d99dc16c79d5d452ce301",
+      "deployment_sha1": "bfa8b4a4ec69d74546c3b95dd8605e132837bd6b"
+    },
+    {
+      "path": "tests/google_review_summary.spec.ts",
+      "git_blob_sha": "5b4b896b0b52b5796a97706ea747122e174a4ae9",
+      "deployment_sha1": "40ef9f4fc129fb741dd3bdea6fb3deb2afc17bc4"
+    },
+    {
+      "path": "tests/mobile_ux.spec.ts",
+      "git_blob_sha": "64b1de47e6d6f8a3bb5d957d467105c04f37f8f4",
+      "deployment_sha1": "b961eb8a90fb8dbc545415bc2fb5828a77156af4"
+    },
+    {
+      "path": "tests/tier1_feature_coverage.spec.ts",
+      "git_blob_sha": "79738ff4b71294f11bedf8221cc4a6c600f418f2",
+      "deployment_sha1": "11e44bcf78c6a73022d942377499d201cdc73b07"
+    },
+    {
+      "path": "tests/tier2_boundary_cases.spec.ts",
+      "git_blob_sha": "d38b32e23a924937ced7eed398e8808f4d1c1cb2",
+      "deployment_sha1": "d353133ff6be71885c1f565f134f995a4d4a08e7"
+    },
+    {
+      "path": "tests/tier3_cross_feature.spec.ts",
+      "git_blob_sha": "41a2aa272f706f0c6f01c2c0b078833590fcbeb3",
+      "deployment_sha1": "e133964bd637993c6821ef86afb260522b2c4c94"
+    },
+    {
+      "path": "tests/tier4_user_scenarios.spec.ts",
+      "git_blob_sha": "4a3b7e98f9483996d78a72b19692289ddba11810",
+      "deployment_sha1": "43e9a2135af72fe4b1dd5c9463c4bcbbc6abeffa"
+    },
+    {
+      "path": "tsconfig.json",
+      "git_blob_sha": "cf9c65d3e0676a0169374d827f7abb97497789ef",
+      "deployment_sha1": "27dded29dc880f958ee67c9ed276fb2b1412f515"
+    },
+    {
+      "path": "src/app/admin/build/page.tsx",
+      "git_blob_sha": "8a6a9f9c57ad3b18cdaf0290e6a25a009747e91b",
+      "deployment_sha1": "5e3368120f568093980ecd112ba8a085902004f3"
+    }
+  ],
+  "documentation_overrides": [
+    "README.md",
+    "docs/MAINTENANCE.md",
+    "docs/DEPLOYED-SOURCE.json"
+  ],
+  "excluded_from_publication": [
+    {
+      "path": "public/wp-content/uploads/2019/09/Pre-Hurricane-Checklist.pdf",
+      "reason": "private data, archive, runtime or key"
+    },
+    {
+      "path": "src/data/blogs.json",
+      "reason": "operational dataset"
+    },
+    {
+      "path": "src/data/job-listings.json",
+      "reason": "operational dataset"
+    },
+    {
+      "path": "src/data/podcast-name-audit-log.json",
+      "reason": "operational dataset"
+    },
+    {
+      "path": "src/data/podcast-name-options.json",
+      "reason": "operational dataset"
+    },
+    {
+      "path": "src/data/projects.json",
+      "reason": "operational dataset"
+    },
+    {
+      "path": "src/data/reviews.json",
+      "reason": "operational dataset"
+    },
+    {
+      "path": "src/data/showcase-videos.json",
+      "reason": "operational dataset"
+    },
+    {
+      "path": "src/data/videos.json",
+      "reason": "operational dataset"
+    },
+    {
+      "path": "src/data/legal/mobile-privacy-policy.html",
+      "reason": "generated, private-data, or GitHub workflow retained independently"
+    },
+    {
+      "path": "src/data/legal/website-privacy-policy.html",
+      "reason": "generated, private-data, or GitHub workflow retained independently"
+    }
+  ],
+  "runtime_changed": false,
+  "business_data_included": false
+}

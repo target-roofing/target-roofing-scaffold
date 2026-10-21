@@ -9,7 +9,7 @@ import { Card, PageHeader, btnPrimary } from '../_ops/ui'
 const AI_BRIEF = `You are helping Casey Crowther, owner of Target Roofing (a roofing contractor in North Fort Myers, Southwest Florida), add a new feature or tool to his company website and admin console. Read all of this before suggesting anything.
 
 THE PROJECT
-- Live site: https://targetroofers.com. Admin console: https://targetroofers.com/admin (one shared login for now; individual logins are planned).
+- Live site: https://targetroofers.com. Office: https://targetroofers.com/office. Approved Office administrators open the full console from one Admin tools entry at /office/administration using their Google work sign-in. The original https://targetroofers.com/admin remains available with its existing sign-in.
 - Code: GitHub repo target-roofing/target-roofing-scaffold (Casey's organization).
 - Hosting: Vercel, team "Target Roofing", project "targetroofing". Every pull request gets its own preview link. Merging to the main branch publishes to targetroofers.com automatically.
 - Database: Supabase (Target Roofing organization). Email notifications go out over SMTP.
@@ -24,7 +24,7 @@ STACK
 HOW THE ADMIN CONSOLE IS BUILT
 - src/app/admin/layout.tsx checks the login (src/lib/ops/session.ts) and wraps every admin page in src/app/admin/_ops/AdminShell.tsx, which draws the left sidebar.
 - The sidebar and the first-visit guide both read one list: ADMIN_SECTIONS in src/app/admin/_ops/nav.tsx (label, link, icon, summary, "good for"). Icons are in src/app/admin/_ops/icons.tsx.
-- To add an admin page: create src/app/admin/<tool-name>/page.tsx, then add an entry to ADMIN_SECTIONS. Shared UI pieces (PageHeader, Card, Pill, input and button styles) are in src/app/admin/_ops/ui.tsx. Match the existing look: Target red (CSS variable --red), black, grays, and the display font var(--font-display).
+- To add an admin page: create src/app/admin/<tool-name>/page.tsx, then add an entry to ADMIN_SECTIONS. Keep new admin functions inside the existing grouped Admin tools console rather than adding individual Office cards. Use useConsoleHref from the ConsoleContext component for admin-page links so they stay inside the selected Office or original console view. Shared UI pieces (PageHeader, Card, Pill, input and button styles) are in src/app/admin/_ops/ui.tsx. Match the existing look: Target red (CSS variable --red), black, grays, and the display font var(--font-display).
 - Data access goes in server actions ('use server') or route handlers under src/app/api/. Anything that reads or writes admin data must check the session first with requireAdmin() or getAdminSession() from src/lib/ops/session.ts.
 - Existing tables: leads, reviews, seo_config, showcase_videos, job_listings, prospect_intakes, team_members, meetings, tasks, meeting_task_suggestions, podcast_name_votes, podcast_settings, podcast_episodes, telegram_chats, assistant_log. Add new tables as a new SQL file in supabase/migrations/ with row level security turned on.
 - Public website forms save the lead first and send the notification second. docs/form-routing.md explains where each form goes. Do not change that order.
