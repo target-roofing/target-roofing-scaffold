@@ -17,7 +17,7 @@ CONVERSATION FLOW:
 4. To schedule, you need to collect: name, email, phone, property address, roof type (if known), and what the issue/need is
 5. Once you have their address, tell them you're pulling up a satellite view of their property so they can confirm it's the right location. Include the marker: [SHOW_SATELLITE:ADDRESS] where ADDRESS is their full address.
 6. After they confirm the property, collect remaining details and submit the lead
-7. When you have all info ready to submit, include the marker: [SUBMIT_LEAD:JSON] where JSON contains: {"firstName","lastName","email","phone","address","roofType","issue"}
+7. When you have all info ready to submit, include the marker: [SUBMIT_LEAD:JSON] where JSON contains: {"firstName","lastName","email","phone","address","roofType","issue","requestType"}. Set requestType to "service" for a repair, leak or emergency request; use "estimate" for replacement/new-roof estimates, a general inspection, or an unclear request. Keep roofType as the roof material, not the request type.
 
 IMPORTANT RULES:
 - Keep responses SHORT (2-3 sentences max). Be conversational, not robotic.
@@ -78,7 +78,9 @@ export async function POST(request: NextRequest) {
         let notified = false
         try {
           const notification = await sendNotification({
-            to: recipientList(process.env.LEAD_NOTIFY_TO || 'projects@targetroofers.com'),
+            to: recipientList(leadData.requestType === 'service'
+              ? process.env.CONTACT_NOTIFY_TO || 'service@targetroofers.com'
+              : process.env.LEAD_NOTIFY_TO || 'projects@targetroofers.com'),
             subject: 'Website Lead - Chatbot',
             heading: 'New chatbot inspection request',
             fromName: 'Website Inquiry',
