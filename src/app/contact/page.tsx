@@ -540,9 +540,9 @@ export default function ContactPage() {
                       Hours
                     </h3>
                     <p className="text-[var(--black)] font-medium leading-relaxed text-sm sm:text-base">
-                      Monday &ndash; Friday: 8:00 AM &ndash; 5:00 PM
+                      Monday &ndash; Friday: 7:00 AM &ndash; 6:00 PM
                       <br />
-                      Saturday: 8:00 AM &ndash; 5:00 PM
+                      Saturday: 7:00 AM &ndash; 6:00 PM
                     </p>
                   </div>
                 </div>
@@ -582,7 +582,7 @@ export default function ContactPage() {
       <section className="w-full">
         <iframe
           title="Target Roofing Headquarters Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.4!2d-81.8723!3d26.6406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDM4JzI2LjIiTiA4McKwNTInMjAuMyJX!5e0!3m2!1sen!2sus!4v1"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3562.630652637541!2d-81.8415015!3d26.7561601!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88db41e670a84551%3A0xda232052a7b50484!2sTarget%20Roofing!5e0!3m2!1sen!2sus!4v1793300734518!5m2!1sen!2sus"
           width="100%"
           height="400"
           style={{ border: 0 }}

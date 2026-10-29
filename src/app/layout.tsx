@@ -116,15 +116,15 @@ export default function RootLayout({
               },
               'geo': {
                 '@type': 'GeoCoordinates',
-                'latitude': 26.7128,
-                'longitude': -81.8998,
+                'latitude': 26.7561601,
+                'longitude': -81.8415015,
               },
               'openingHoursSpecification': [
                 {
                   '@type': 'OpeningHoursSpecification',
                   'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-                  'opens': '08:00',
-                  'closes': '17:00',
+                  'opens': '07:00',
+                  'closes': '18:00',
                 },
               ],
               'areaServed': [
